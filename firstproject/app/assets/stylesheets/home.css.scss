@@ -1,0 +1,88 @@
+#myCanvas { 
+	position:fixed;
+//	top:0px;
+	left:center;
+//	z-index:0;
+	height:900px;
+	width: 1000px;
+	margin-top:-10px;
+	//margin-left:-350px;
+}
+
+#id-all { 
+	position:absolute; 
+	top:0px;
+//	left:center;
+//	z-index:0; 
+	height: 900px; 
+	width: 1000px; 
+	background-color: transparent; 
+}
+
+#id-top {
+	background-color: transparent;
+	height: 150px;
+	width: 1000px
+}
+
+/*#id-top::selection{
+  	background:#000;//背景
+	color:#FFF;//文字顏色
+}
+*/
+#id-brand {
+	margin-left: 0px; 
+	height: 150px; 
+	width: 250px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+#id-main {
+	margin-left: 0px; 
+	height: 600px; 
+	background-color: transparent; 
+	width: 1000px;
+	text-align: center;
+	vertical-align:middle;
+}
+#id-top-bar ul {  
+	list-style:none; 
+	margin-top:-10px; 
+	padding:0px; 
+	border-style:none;
+}
+
+#id-top-bar li {
+	width: 100px;
+	float: right;
+	text-align:center;
+	background-color: #00ced1;
+	margin-right: 2px;
+	height: 25px;
+}
+
+a:hover{
+    color:#5BB0E6;
+    -o-transition: color .20s linear;
+    -webkit-transition: color .20s linear;
+    -moz-transition: color .20s linear;
+    transition:  color .20s linear;
+}
+a { 
+	display: block; 
+	text-align: center; 
+	height: 30px; 
+}
+#id-main ul{
+	list-style: none;
+	vertical-align:middle;
+	text-align:center;
+}
+
+#id-main li{
+	float:center;
+
+
+}
+ 

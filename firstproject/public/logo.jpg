@@ -1,0 +1,3312 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html class="" lang="en"> <!--<![endif]-->
+
+
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# minuscom: http://ogp.me/ns/fb/minuscom#">
+    <meta property="fb:app_id" content="217507578283312" /> 
+    <meta property="og:type"   content="minuscom:upload" /> 
+    <meta property="og:url"    content="http://minus.com/lb0mxGwIkiXHHe" /> 
+    <meta property="og:title"  content="minilogo.jpg" /> 
+    <meta property="og:image"  content="http://i.minus.com/jb0mxGwIkiXHHe.jpg" />
+
+
+
+
+
+<title>
+minilogo - minilogo.jpg - Minus</title>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+<meta http-equiv="Content-Language" content="en-us"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="icon" href="http://dgbc7tshfzi70.cloudfront.net/smedia/root/favicon6.png" /> 
+<link rel="shortcut icon" href="http://dgbc7tshfzi70.cloudfront.net/smedia/root/favicon6.png" /> 
+
+
+
+  
+      
+      <meta name="description" content="Minus helps you create and share files online. Drag your pictures and files onto this page, and we'll do the rest."/>
+      
+  
+
+
+<meta name="keywords" content="minus, min.us, min, sharing, photo, image, file, music, document"/>
+<meta name="title" content="minilogo.jpg - Minus" />
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW"/>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    
+
+    
+        <link rel="image_src" href="http://i.minus.com/jb0mxGwIkiXHHe.jpg">
+    
+
+
+
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+  (function(){
+    var locationMatch = window.location.hash.match('#!(/m(?!ine).*)$');
+    if (locationMatch) {
+      window.location = locationMatch[1];
+    }
+  })();
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var IS_DEBUG = false,
+  LOGIN_USERNAME = '',
+  LOGIN_DISPLAY_NAME = '',
+  LOGIN_REFERRAL_ID = '',
+  LOGIN_AVATAR = '',
+  USED_DEFAULT_PUBLIC = true,
+  FB_AUTO_POST = false,
+  TW_AUTO_POST = false,
+  MEDIA_URL = 'http://dgbc7tshfzi70.cloudfront.net/smedia/',
+  JS_TEMPLATE_VERSION = '7ddd2',
+  IS_MODERATOR = false,
+  UPLOADER_QUEUE_ENABLED = false;
+  AJAX_GALLERY_EXPLORE = false;
+  AJAX_GALLERY_DASHBOARD = false;
+  SAFETY_MODE = false;
+//]]>
+</script>
+<link href="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/c/css/minus.r3537934e230dd37092aef5ecbc3e70ac46fd0fc3.css" rel="stylesheet" type="text/css" />
+
+<script id="minus_template_cache" type="text/x-dot-template">
+  <~#~>searchDropdown<~#~> <%
+    /* if((it.users.length + it.my_folders.length + it.public_folders.length) == 0) {
+%>
+<p class="gmr_noresults">No results found for <strong class="result_highlight"><%=it.query%></strong></p>
+<%
+    } */
+%>
+
+    <%
+        if(it.users.length > 0) {
+    %>
+    <div class="global_mainsearch_results_users_container">
+        <div class="gmr_title">
+            <span class="gmr_title_span">Users</span>
+        </div>
+        <ul class="gmru_user_ul">
+            <% for(var i=0,l=it.users.length;i<l; i++) {
+                var user = it.users[i];
+            %>
+            <li class="result_item" user_id="<%=user.slug%>">
+                <a class="gmru_avatar" href="<%=profile_link(user.slug)%>"><img src="<%=user.avatar%>" width="32" height="32" /></a>
+
+                <div class="gmr_rightcol">
+                    <a class="gmru_username result_item_link" href="<%=profile_link(user.slug)%>"><%=user.display_name%><%
+                        if(user.display_name != user.username_highlighted) {
+                        %> (<%=user.username_highlighted%>)<% } /**/ %></a>
+                    <% if( user.enable_follow ) { %>
+                        <% if(user.following) { %>
+                            <a class="gmru_unfollow btnset2 btn_unfollow" href="javascript: void(0)">Unfollow</a>
+                            <a class="gmru_follow btnset2 btn_follow" style="display:none" href="javascript: void(0)">Follow</a>
+                        <% } else { %>
+                            <a class="gmru_unfollow btnset2 btn_unfollow" style="display:none" href="javascript: void(0)">Unfollow</a>
+                            <a class="gmru_follow btnset2 btn_follow" href="javascript: void(0)">Follow</a>
+                        <% } %>
+                    <% } %>
+                    <div class="clear"></div>
+
+                    <% if(user.description_match) { %>
+                    <p class="gmru_description"><%=user.description%></p>
+                    <% } else { %>
+                    <ul class="gmru_userstatus_ul">
+                        <li><p class="gmru_uu_name">Shares <span class="gmru_uu_value"><%=user.shares%></span></p></li>
+                        <li><p class="gmru_uu_name">Likes <span class="gmru_uu_value"><%=user.reshares%></span></p></li>
+            <li><p class="gmru_uu_name">Items <span class="gmru_uu_value"><%=user.items%></span></p></li>
+                    </ul>
+                    <% } %>
+                </div>
+            </li>
+            <%
+                } /* end users loop */
+            %>
+        </ul>
+    </div>
+
+    <% /* endif users.length > 0 */ } else { %>
+
+        <div class="clear"></div>
+        <div class="global_mainsearch_results_folders_container">
+            <div class="gmr_title">
+                <span class="gmr_title_span">Users</span>
+            </div>
+            <div class="noresults_container">
+                <span class="noresults_message">No results found for <span class="colorset_medium"><%=it.query%></span></span>
+            </div>
+        </div>
+
+        <% } %>
+
+        <% if(it.my_folders.length > 0) { %>
+    <div class="clear"></div>
+
+    <!-- ############ Folder Results ############ -->
+    <div class="global_mainsearch_results_folders_container">
+        <div class="gmr_title">
+            <span class="gmr_title_span">My Profile<span id="mine_count" style="color:#999"></span></span>
+        </div>
+        <ul class="gmrf_folders_ul">
+            <% for(var i=0,l=it.my_folders.length;i<l; i++) {
+                var gallery = it.my_folders[i];
+            %>
+            <li class="result_item">
+
+                <a class="gmrf_thumbnail" href="javascript: void(0)"><img src="<%=gallery.thumbnail_url%>" width="32" height="32"></a>
+
+                <div class="gmr_rightcol">
+                    <a class="gmrf_foldername result_item_link" href="<%=HOME_PATH%>m<%=gallery.id%>"><%=gallery.name%></a>
+                    <div class="clear"></div>
+                    <div class="gmrf_username" href="javascript: void(0)">
+                        <a href="<%=profile_link(gallery.username)%>"><%=gallery.user_display_name%></a><span class="gmrf_by">by</span>
+                    </div>
+                    <div class="clear"></div>
+
+
+                </div>
+
+            </li>
+            <%
+                } /* end for my_folders */
+            %>
+        </ul>
+    </div>
+    <%
+        /* endif my_folders.length > 0 */ } else { %>
+
+                <div class="clear"></div>
+                <div class="global_mainsearch_results_folders_container">
+                    <div class="gmr_title">
+                        <span class="gmr_title_span">My Profile<span id="mine_count" style="color:#999"></span></span>
+                    </div>
+
+                    <% if (LOGIN_USERNAME) { %>
+                    <div class="noresults_container">
+                        <span class="noresults_message">No results found for <span class="colorset_medium"><%=it.query%></span></span>
+                    </div>
+                    <% } else { %>
+                    <div class="noresults_container">
+                        <span class="noresults_message"><span class="left">Please&nbsp;</span> <a href="#" onclick='show_sign_in_modal()' class="btnSet btnSet1">sign in</a><span class="left">&nbsp;to search your folders.</span></span>
+                    </div>
+                    <% } %>
+
+                </div>
+
+                <% } %>
+
+        <% if(it.public_folders.length > 0) { %>
+    <div class="clear"></div>
+
+    <div class="global_mainsearch_results_folders_container">
+        <div class="gmr_title">
+            <span class="gmr_title_span">Explore</span>
+        </div>
+        <ul class="gmrf_folders_ul">
+            <% for(var i=0,l=it.public_folders.length;i<l; i++) {
+                var gallery = it.public_folders[i];
+            %>
+            <li class="result_item">
+
+                <a class="gmrf_thumbnail" href="javascript: void(0)"><img src="<%=gallery.thumbnail_url%>" width="32" height="32"></a>
+                
+                <div class="gmr_rightcol">
+                    <a class="gmrf_foldername result_item_link" href="<%=HOME_PATH%>m<%=gallery.id%>#<%=gallery.item_id%>"><%=gallery.name%></a>
+                    <div class="clear"></div>
+                    <div class="gmrf_username" href="javascript: void(0)">
+                        <% if(gallery.user_display_name) { %><a href="<%=profile_link(gallery.username)%>"><%=gallery.user_display_name%></a><span class="gmrf_by">by</span>
+                        <% } else { %><span class="gmrf_guest">by Guest</span> <% }%>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+
+            </li>
+            <%
+                } /* end for public_folders */
+            %>
+        </ul>
+    </div>
+        <% } /* endif public_folders.length > 0 */ else { %>
+
+        <div class="clear"></div>
+        <div class="global_mainsearch_results_folders_container">
+            <div class="gmr_title">
+                <span class="gmr_title_span">Explore</span>
+            </div>
+            <div class="noresults_container">
+                <span class="noresults_message">No results found for <span class="colorset_medium"><%=it.query%></span></span>
+            </div>
+        </div>
+
+<% } %>
+
+    <div class="clear"></div>
+    <%
+        if((it.users.length + it.my_folders.length + it.public_folders.length) > 0) {
+    %>
+    <a class="gmru_moreresults_container">See more results for <strong class="result_highlight"><%=it.query%></strong></a>
+    <%
+        }
+    %>
+<~#~>dropZone<~#~> <% /* not used -- drop zone is in gallerySubheader.html */ %>
+<~#~>galleryLinear<~#~>     <%
+        var item, item_vars;
+        for (var i = it.start_idx, l = it.items.length; (i <= it.end_idx && i < l); i++) {
+            item = it.items[i];
+            item_vars = it.generate_item_vars_func(item, it.selected);
+    %>
+        <div <% if (item_vars.node_id) { %>id="<%= it.id_prefix %><%= item_vars.node_id %>"<% } %> <%= item_vars.node_add_attr %> class="itemnode <%= item_vars.node_add_class %>">
+            <div class="thumb_outer">
+                <div class="thumb_inner">
+                    <% if (item_vars.is_not_viewable_mature) { %>
+                        <div class="maturecontent_linear" style="display: block;">
+
+                            <% if(LOGIN_USERNAME === '') {%>
+                                <div class="hide_mature">
+                                    <span class="ui-sprite icon"></span>
+                                    <span class="text">
+                                        <strong>Mature Content</strong>
+                                        <br>
+                                        <a class="link-sign-in" href="#">Sign in</a> or
+                                        <a class="link-sign-up" href="#">create an account</a> to view
+                                    </span>
+                                </div>
+                            <%} else {%>
+                                <div class="hide_mature">
+                                      <span class="ui-sprite icon"></span>
+                                      <span class="text"><strong>Mature Content</strong><br />Hidden because <a href='/pref'>safety</a> is on.</span>
+                                </div>
+                            <% } %>
+
+                        </div>
+                    <% } else { %>
+                        <img class="thumb" <% if (item_vars.src_img) { %>src="<%= item_vars.src_img %>"<% } %> style="<% if (!item_vars.is_resized_loaded) { %>display:none;<% } %><% if (item_vars.thumb_add_style) { %><%= item_vars.thumb_add_style %><% } else { %>display: none;<% } %>"/>
+                        <img class="image_loading_icon" src="<%= it.attr.src_loading %>" <% if (item_vars.is_loading_hidden) { %>style="display:none;"<% } %>/>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="view_cont">
+                <div class="view">
+                    <div class="item_top" <% if (item_vars.id) { %>style="display:none;"<% } %>>
+                        <% if (!item_vars.id) { %>
+                            <div class="upload_progress_wrapper">
+                            <% if (item_vars.is_progress_supported) { %>
+                                <div class="text_progress"><%= it.txt_progress %></div>
+                                <div class="quota_field black">
+                                    <div class="quota_bar orange" style="width: <%= item_vars.upload_percent%>%;"></div>
+                                </div>
+                                <div class="text_percent"><%= item_vars.upload_status_text.percent %></div>
+                                <div class="text_status text_bytes"><%= item_vars.upload_status_text.bytes %></div>
+                                <div class="text_status text_speed"><%= item_vars.upload_status_text.speed %></div>
+                                <div class="clear"></div>
+                            <% } else { %>
+                                <img src="<%= it.attr.src_progress %>" />
+                            <% } %>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="image_outer">
+                        <div class="image_caption_wrap">
+                            <div class="image_inner">
+                                <% if (item_vars.is_not_viewable_mature) { %>
+                                    <div class="maturecontent_linear" style="display: block;">
+                                        <% if (LOGIN_USERNAME === '') { %>
+                                            <div class="hide_mature">
+                                                <span class="ui-sprite icon"></span>
+                                                <span class="text">
+                                                    <strong>Mature Content</strong>
+                                                    <br>
+                                                    <a class="link-sign-in" href="#">Sign in</a> or
+                                                    <a class="link-sign-up" href="#">create an account</a> to view
+                                                </span>
+                                            </div>
+                                        <%} else {%>
+                                            <div class="hide_mature">
+                                                <span class="ui-sprite icon"></span>
+                                                <span class="text">
+                                                    <strong>Mature Content</strong>
+                                                    <br>Hidden because <a href='/pref'>safety</a> is on.
+                                                </span>
+                                            </div>
+                                        <% } %>
+
+                                    </div>
+                                <% } else { %>
+                                    <% if (item_vars.is_image) { %>
+                                        <a
+                                            <% if (it.is_embedded) { %>
+                                                href="<%= item_vars.gallery_link %>"
+                                            <% } else if (item_vars.item_link) { %>
+                                                href="<%= item_vars.item_link %>"
+                                            <% } %>
+                                            class="item_link"
+                                        >
+                                            <span class="play-icon"></span>
+                                            <img class="image" <% if (item_vars.src_img) { %>src="<%= item_vars.src_img %>"<% } %> <% if (!item_vars.is_resized_loaded) { %>style="display: none;"<% } %>/>
+                                        </a>
+                                    <% } else { %>
+                                        <a
+                                            <% if (it.is_embedded) { %>
+                                                href="<%= item_vars.gallery_link %>"
+                                            <% } else if (item_vars.download_link) { %>
+                                                href="<%= item_vars.download_link %>"
+                                            <% } %>
+                                            class="item_link image_download_link"
+                                        >
+                                            <img class="image file_icon" <% if (item_vars.src_img) { %>src="<%= item_vars.src_img %>"<% } %> <% if (!item_vars.is_resized_loaded) { %>style="display:none;"<% } %>/>
+                                        </a>
+                                    <% } %>
+                                    <img class="image_loading_icon" src="<%= it.attr.src_loading %>" <% if (item_vars.is_loading_hidden) { %>style="display:none;"<% } %>/>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_bottom"></div>
+                </div>
+            </div>
+
+            <div class="clear">&nbsp;</div> <!-- &nbsp; is needed for ie7 -->
+        </div>
+
+    <%
+        }
+    %>
+
+<~#~>galleryLink<~#~> <div class="menu_shortlink_container">
+    <div class="shortlink_readonly default-form">
+        <label for="shortlink_readonly_<%= it.readerUrl %>">Link:</label>
+        <input type="text" id="shortlink_readonly_<%= it.readerUrl %>" class="" value="<%= it.baseUrl%><%= it.readerUrl %>" spellcheck="false" readonly="readonly">
+    </div>
+
+    <%? it.isEditor %>
+        <div class="shortlink_edit default-form">
+            <label for="shortlink_edit_<%= it.readerUrl %>">Link:</label>
+            <span class="shortlink_input_wrapper">
+                <span><%= it.baseUrl %></span>
+                <input type="text" id="shortlink_edit_<%= it.readerUrl %>" value="<%= it.readerUrl %>" spellcheck="false">
+            </span>
+            <span class="shortlink_loading">
+                <img src="/smedia/minus/images/ajax-loader-bar-small.gif">
+            </span>
+        </div>
+
+        <div class="menu_edit_pencil" inline_input_id="shortlink_edit_<%= it.readerUrl %>"></div>
+    <%?%>
+    <div class="clear"></div>
+</div>
+
+<~#~>gridPaneFrame<~#~> 
+<!-- Wrapper -->
+<div class="grid-wrapper">
+
+<%
+    var counter = 0, folder = null, name = '', subdomain = '', ajax_class = '', hide_mature = false, folder_link = '';
+    for (var index in it.items) {
+        if (it.items.hasOwnProperty(index)) {
+            counter++;
+            folder = it.items[index];
+            fullname = folder.name ? folder.name : 'Untitled';
+            name = folder.name ? folder.name : 'Untitled';
+            if(name.length > 35 && name.indexOf(' ') > 35 || name.length > 35 && name.indexOf(' ') == -1 ) { name = name.substring(0, 30) + '...' }
+            subdomain = (it.section === 'profile' && !IS_DEBUG && !_.isUndefined(folder.resharer)) ? folder.subdomain : '';
+            hide_mature = (folder.contains_mature_content && (LOGIN_USERNAME === '' || SAFETY_MODE));
+            ajax_class = (it.section !== 'profile' || _.isUndefined(folder.resharer)) ? 'jqaddress' : '';
+            folder_link = subdomain + '/m' + folder.reader_id + (it.section!='explore' && folder.item_id ? '/' + folder.item_id : '');
+%>
+
+
+<!-- Grid Item -->
+<div id="folder-wrapper-<%= folder.reader_id %>" class="grid folder <%? !folder.is_public %>is-private<%?%> <% if(IS_MODERATOR && $('body').hasClass('oldbase')) { %>folder-opage<% } %>">
+    <div class="item">
+      <% if (hide_mature) { %>
+      <div class="hide_mature">
+          <span class="ui-sprite icon"></span>
+          <span class="text"><strong>Mature Content</strong><br />
+
+            <% if(LOGIN_USERNAME) { %>
+            User discretion is advised. <br />To disable Safety Mode, update your <a class="prevent-overlay" href="/pref">settings</a>.
+            <% } else { %>
+            <a class="show_signin disable_safety_mode" href="javascript: void(0)">Sign in</a> or <a class="show_signup disable_safety_mode" href="javascript: void(0)">create an account</a> to view</span>
+            <% } %>
+      </div>
+      <% } else { %>
+
+    <a href="<%= folder_link %>">
+        <img src="<% if(folder.thumbnail_url) { %><%=folder.thumbnail_url %><% } else { %><%=folder.thumbnail_url %><% } %>" class="<% if(!folder.has_thumbnail) { %> filetype <% } else { %>  <% } %> "data-image-index="<%=counter%>" />
+    </a>
+
+      <% } %>
+
+       <!-- Ribbon -->
+        <% if(it.pane == 'mine') { %>
+            <span class="gii_ribbon"></span>
+        <% } %>
+
+
+          <!-- Drop Down -->
+
+          <% if(it.username == folder.creator_slug || IS_MODERATOR) { %>
+          <div style="text-align: left;" class="grid_dropdown_container folder-actions-wrapper"
+              data-page="<%= it.page %>" data-folder-id="<%= folder.reader_id %>" data-folder-name="<%= folder.name %>"
+              data-is-public="<% if (folder.is_public) { %>true<% } else { %>false<% } %>">
+              <div class="grid_dropdown_innerwrap">
+
+                  <!-- Arrow -->
+                  <a class="grid_dropdown_arrow border_all_2px" href="javascript: void(0)"></a>
+
+                  <!-- Drop Down -->
+                  <ul class="grid_dropdown_drop_ul border_all_2px">
+                      <% if(it.pane == 'starred') { %>
+                          <li><a class="grid-item-save favorite_btn" gallery_id="<%=folder.reader_id %>"><%
+                              if (folder.is_favorited) { %><span class="text">Unstar<%
+                              } else { %><span class="text">Star<% } %></span></a></li>
+                      <% } %>
+
+                      <% if((it.section != 'explore' && it.pane!='public' && it.username && it.username == folder.creator_slug) || IS_MODERATOR) { %>
+                          <!-- Creator -->
+                          <% if(it.section != 'explore' && it.pane!='public' && it.username && it.username == folder.creator_slug) { %>
+                              <li><a class="folder-action-publish">Publish</a></li>
+                              <li><a class="folder-action-unpublish">Unpublish</a></li>
+                          <% } %>
+                          <li><a class="folder-action-delete" gal_name="<%=name %>">Delete</a></li>
+                      <% } %>
+
+                      <% if(typeof folder.featured != 'undefined') { %>
+                          <li>
+                              <a class="flag_btn gii_flag" href="javascript: void(0)" gallery_id="<%=folder.reader_id %>"<%if(folder.item_id){ %> item_id="<%=folder.item_id%>"<% } %> title="Flag this item as inappropriate">
+                                  <span class="gii_flag_text"><% if (folder.is_flagged) { %>Flagged<%
+                                      } else { %>Flag Item<% } %>
+                                      <% if( typeof folder.flag_count != 'undefined') { %>&nbsp;
+                                          <span class="gii_flag_count">(<%=folder.flag_count%>)</span>
+                                      <% } %>
+                                  </span>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="flag_btn gii_flag" href="javascript: void(0)" gallery_id="<%=folder.reader_id %>" title="Flag this folder as inappropriate">
+                                  <span class="gii_flag_text"><% if (folder.is_flagged) { %>Flagged<%
+                                      } else { %>Flag Folder<% } %>
+                                      <% if( typeof folder.flag_count != 'undefined') { %>&nbsp;
+                                          <span class="gii_flag_count">(<%=folder.flag_count%>)</span>
+                                      <% } %>
+                                  </span>
+                              </a>
+                          </li>
+                          <% if(IS_MODERATOR) { %>
+                              <li><a class="clear_flags_btn" id="<%=folder.reader_id %>" gal_name="<%=name %>">Clear Flags</a></li>
+                          <% } %>
+
+                          <li><a class="feature_btn" mlist_id="<%=folder.reader_id %>"<%if(folder.item_id){ %> item_id="<%=folder.item_id%>"<% } %> gal_name="<%=name %>"><% if (folder.featured) { %>Unfeature<% } else { %>Feature<% } %></a></li>
+                      <% } %>
+                  </ul>
+              </div> <!-- end: grid_dropdown_innerwrap -->
+          </div>
+          <% } %>
+          <!-- Drop Down Ends -->
+
+
+    </div>
+    <% if(it.section != 'explore') { %>
+    <div class="preview_container">
+        <% for(var i=0; i<4; i++) { %>
+          <a class="name <% if(i == 3) { %>last-child<% } %>" title="<%=fullname%>" href="<%= folder_link %>">
+            <% if (!hide_mature && folder.preview_items[i] && folder.preview_items[i]+".jpg" != folder.thumbnail_id) { %>
+              <img src="<%=folder.preview_items_url[i]%>" />
+            <% } else { %>
+
+            <% } %>
+          </a>
+        <% } %>
+    </div>
+    <% } %>
+    <div class="clear"></div>
+
+    <div class="details <% if (it.pane === 'mine') { %>myuploads<% } %>">
+        <div class="details-section last">
+            <a class="name" title="<%=fullname%>" href="<%= folder_link %>">
+            <% if (folder.featured && IS_MODERATOR) {  %><span class="featured_span">F</span><% } %>
+            <%= name %></a>
+
+
+            <div class="stats">
+                <span class="stat-item item-count <%? it.section=='explore' && folder.item_count > 1 %>item-count-big<%?%>">
+                    <span class="icon ui-sprite"></span>
+                    <span class="text"><%=folder.item_count%></span>
+                </span>
+                <span class="stat-item view-count">
+                    <span class="icon ui-sprite"></span>
+                    <span class="text"><%= intComma(folder.view_count) %></span>
+                </span>
+                <span class="stat-item date-count">
+                    <span class="icon ui-sprite"></span>
+                    <span class="text"><%=folder.last_visit%></span>
+                </span>
+
+                <% if(IS_MODERATOR && $('body').hasClass('oldbase')) { %>
+                    <span class="stat-item user">
+                        <span class="text">
+                            <% if (folder.creator){ %>
+                                <a class="grid-timestamp-username" href="<%=profile_link(folder.creator_slug) %>"> <%=folder.creator_display_name%></a>
+                            <% } else { %>
+                                <span class="grid-timestamp-guest">guest</span>
+                            <% } %>
+                        </span>
+                    </span>
+                <% } %>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<%
+    }
+  }
+%>
+
+</div> <!-- Wrapper Ends -->
+<div class="clear"></div>
+<~#~>galleryShareLinks<~#~> <div id="<%= it.modalID %>" class="share-options-modal">
+    <div class="item-preview">
+        <div class="wrap-to-center">
+            <div class="item-preview-image-container">
+                <% /* Image will be added here */ %>
+            </div>
+            <div class="item-mature-content-message">
+                <span>Mature Content</span>
+            </div>
+            <div class="wrap-to-center-ie7"></div>
+        </div>
+    </div>
+    <div class="item-options-links">
+        <div class="item-share-links">
+            <h3>Share Links</h3>
+            <p>More share links</p>
+
+            <div class="links-container">
+                <p class="image-share-option">
+                    <label for="<%= it.prefix.directLink %><%= it.modalID %>">Direct Link</label>
+                    <input id="<%= it.prefix.directLink %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+                <p>
+                    <label for="<%= it.prefix.imageLink %><%= it.modalID %>" class="image-share-link-label">Image Link</label>
+                    <label for="<%= it.prefix.imageLink %><%= it.modalID %>" class="file-share-link-label">File Link</label>
+                    <input id="<%= it.prefix.imageLink %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+                <p class="image-share-option">
+                    <label for="<%= it.prefix.forumCode %><%= it.modalID %>">Forum Code</label>
+                    <input id="<%= it.prefix.forumCode %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+                <p class="image-share-option">
+                    <label for="<%= it.prefix.htmlCode %><%= it.modalID %>">HTML Code</label>
+                    <input id="<%= it.prefix.htmlCode %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+                <p class="image-share-option">
+                    <label for="<%= it.prefix.thumbLink %><%= it.modalID %>">Thumbnail Link</label>
+                    <input id="<%= it.prefix.thumbLink %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+                <p class="folder-share-option">
+                    <label for="<%= it.prefix.folderLink %><%= it.modalID %>">Folder Link</label>
+                    <input id="<%= it.prefix.folderLink %><%= it.modalID %>" type="text" class="input-link" readonly="readonly" spellcheck="false" value="">
+                </p>
+            </div>
+        </div>
+
+        <div class="folder-embed folder-share-option">
+            <h3>Embed Folder</h3>
+            <p>Copy and paste the embed HTML code for your website.</p>
+            <input id="<%= it.prefix.embed%><%= it.modalID %>" type="text" class="formset_input border_all_2px" readonly="readonly" spellcheck="false" value="">
+        </div>
+
+        <div class="folder-send folder-share-option">
+            <form method="post" action="">
+                <h3>Send to Friends</h3>
+                <p class="status hidden"></p>
+                <p>Enter email and/or username (separated by commas or spaces)</p>
+                <p class="send-list-input-container">
+                    <input id="folder-send-<%= it.modalID %>" type="text" name="send-list" class="formset_input border_all_2px" spellcheck="false" autocomplete="off" value="">
+                    <span class="email-username-matches hidden"></span>
+                </p>
+                <p class="text-right">
+                    <img class="sending-image" src="<%= it.IMAGE_URL %>ajax-loader.gif">
+                    <input type="submit" class="btnset3 btn_sendtofriend" name="submit" value="Send">
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<~#~>itemCopyFolderList<~#~> 
+<% 
+    var folderVars;
+    for (var i = 0, l = it.end; i < l; i++) { 
+        folderVars = it.generateFolderVarsFunc(it.folders[i]);
+
+        if (it.excludeFolder && it.excludeFolder === folderVars.id) {
+            continue;
+        }
+%>
+        <li data-folder-id="<%= folderVars.id %>">
+            <span class="ui-sprite icon"></span>
+            <span class="text"><span class="full">(Full)</span> <%= folderVars.name %></span>
+        </li>
+<% 
+    } 
+%>
+<~#~>galleryRenameForm<~#~> <form>
+    <input type="text" class="inline_edit" value="<%= it.name %>">
+</form>
+
+<div class="folder-name-saving">
+    <p><img src="<%= it.IMAGE_URL %>ajax-loader-bar-small.gif"></p>
+</div>
+<~#~>itemCopyFolderListItem<~#~> <li <%? it.isHidden %>style="display: none;"<%?%>
+    <%? it.isAdded %>class="already-added"<%?%>
+    data-folder-id="<%= it.id %>"
+    data-copied-item-id="<%= it.copiedItemID %>"
+>
+        <span class="ui-sprite icon"></span>
+        <span class="text"><span class="full">(Full)</span> <%= it.name %></span>
+</li>
+<~#~>compactPaneFrame<~#~> <div class="layoutlist_wrapper <% if (it.pane != 'mine') { %>layoutlist_wrapper_feed<% } else { %>layoutlist_wrapper_myuploads<% } %>">
+    <div class="layoutlist_innerwrap"> <!-- start: layoutlist_innerwrap -->
+
+        <!-- Body -->
+        <div class="layoutlist_i_body"> <!-- start: layoutlist_i_body -->
+      
+        <%
+            var folder = null,
+                name = '',
+                subdomain = '',
+                ajax_class = '',
+                folder_link =  '';
+            for(index in it.items) {
+                if (it.items.hasOwnProperty(index)) {
+                    folder = it.items[index];
+                    name = folder.name ? folder.name : 'Untitled';
+                    subdomain = (it.section === 'profile' && !IS_DEBUG && !_.isUndefined(folder.resharer)) ? folder.subdomain : '';
+                    ajax_class = (it.section !== 'profile' || _.isUndefined(folder.resharer)) ? 'jqaddress' : '';
+                    folder_link = subdomain + '/m' + folder.reader_id + (folder.item_id ? '/' + folder.item_id : '');
+        %>
+
+                    <!-- Item -->
+                    <div id="folder-wrapper-<%= folder.reader_id %>" class="layoutlist_ib_item <%? !folder.is_public %>is-private<%?%>">
+                        <%? it.pane === 'mine' %>
+                            <div class="layoutlist_col_select layoutlist_ibi_select">
+                                <span>
+                                    <input class="folder-checkbox" type="checkbox" value="<%= folder.reader_id %>" data-page="<%= it.page %>" data-is-public="<% if (folder.is_public) { %>true<% } else { %>false<% } %>">
+                                </span>
+                            </div>
+                        <%?%>
+                        
+                        <div class="layoutlist_col_title layoutlist_ibi_title">
+                            <a href="<%= folder_link %>" title="<%=name %>" class="<%= ajax_class %>">
+                                <%=name%>
+                                <% if(folder.item_name) { %> - <%= folder.item_name%><% } %>
+                            </a>
+                        </div>
+                        
+                        <div class="layoutlist_col_author layoutlist_ibi_author">
+                            <% if (folder.creator) { %>
+                                <a class="vp_list_cell_author_link" href="<%=profile_link(folder.creator_slug) %>" title="<%=folder.creator_display_name %>">
+                                    <%=folder.creator_display_name %>
+                                </a>
+                            <% } else { %>
+                                <span>Guest</span>
+                            <% } %>
+                        </div>
+
+                        <div class="layoutlist_col_files layoutlist_ibi_files">
+                            <span><%=folder.item_count%></span>
+                        </div>
+
+                        <div class="layoutlist_col_views layoutlist_ibi_views">
+                            <span><%=folder.view_count %></span>
+                        </div>
+
+                        <div class="layoutlist_col_date layoutlist_ibi_date">
+                            <span><%=folder.last_visit %></span>
+                        </div>
+
+                        <div class="layoutlist_col_actions layoutlist_ibi_actions"> <!-- start: layoutlist_col_actions -->
+                            <span>
+
+                                <% if (typeof folder.featured != 'undefined' || it.pane == 'mine') { %>
+                                    <div class="list_dropdown_container folder-actions-wrapper"
+                                        data-page="<%= it.page %>" data-folder-id="<%= folder.reader_id %>" data-folder-name="<%= folder.name %>"
+                                        data-is-public="<% if (folder.is_public) { %>true<% } else { %>false<% } %>"                        
+                                    > <!-- start: list_dropdown_container -->
+                                        <div class="grid_dropdown_innerwrap"> <!-- start: grid_dropdown_innerwrap -->
+                                            <!-- Arrow -->
+                                            <a class="grid_dropdown_arrow border_all_2px" href="javascript: void(0)"></a>
+
+                                            <!-- Drop Down -->
+                                            <ul class="grid_dropdown_drop_ul border_all_2px">
+                                                <li>
+                                                    <a class="flag_btn gii_flag" href="javascript: void(0)" gallery_id="<%=folder.reader_id %>" title="Flag this gallery as inappropriate">
+                                                        <span class="gii_flag_text" style="display: inline;">
+                                                            <% if (folder.is_flagged) { %>Unflag<% } else { %>Flag<% } %>
+                                                        </span>
+                                                        <% if( typeof folder.flag_count != 'undefined') { %>
+                                                            <span class="gii_flag_count" style="display: inline;">(<%=folder.flag_count%>)</span>
+                                                        <% } %>
+                                                    </a>
+                                                </li>
+
+                                                <!-- Feed -->
+                                                <% if (it.pane == 'feed') { %>
+                                                    <li><a class="grid-item-remove" id="<%=folder.reader_id %>">Hide</a></li>
+                                                <% } %>
+
+                                                <!-- Creator -->
+                                                <% if(it.section != 'explore' && it.pane!='public' && it.username && it.username == folder.creator) { %>
+                                                    <li><a class="folder-action-publish">Publish</a></li>
+                                                    <li><a class="folder-action-unpublish">Unpublish</a></li>
+                                                    <li><a class="folder-action-delete">Delete</a></li>
+                                                <% } %>
+
+                                                <% if(typeof folder.featured != 'undefined') { %>
+                                                    <li><a class="feature_btn" id="<%=folder.reader_id %>" gal_name="<%=name %>"><% if (folder.featured) { %>Unfeature<% } else { %>Feature<% } %></a></li>
+                                                <% } %>
+
+                                                <% if(typeof folder.flag_count != 'undefined' && folder.flag_count > 0) { %>
+                                                    <li><a class="clear_flags_btn" id="<%=folder.reader_id %>" gal_name="<%=name %>">Clear Flags</a></li>
+                                                <% } %>
+                                            </ul>
+                                        </div> <!-- end: grid_dropdown_innerwrap -->
+                                    </div> <!-- end: list_dropdown_container -->
+                                <%?%>
+                            </span>
+                        </div> <!-- end: layoutlist_col_actions -->
+
+                    </div> <!-- end: Item -->
+
+        <% 
+                } 
+            } 
+        %>
+      
+        </div> <!-- end: layoutlist_i_body -->
+
+        <div class="clear"></div>
+    
+    </div> <!-- end: layoutlist_innerwrap -->
+</div> <!-- layoutlist ends -->
+
+<~#~>voting<~#~> <div class="voting" data-item_id="l<%=it.item.id %>" data-voted="<%=it.item.user_vote %>">
+    <a class="vote_up btn-action btn-like <%? it.item.vote_up_count === 0 %>no-counter<%?%>" href="javascript: void(0);">
+        <span class="ui-action-sprite icon-text">
+            <span class="ui-sprite icon"></span>
+            <span class="text">Like</span>
+            <span class="hover-text">Unlike</span>
+        </span>
+        <span class="ui-action-sprite counter"><%= it.item.vote_up_count %></span>
+    </a>
+</div>
+<~#~>galleryDetailsSendFolder<~#~> <form method="post" action="">
+    <p class="status hidden"></p>
+    <p>Enter email and/or username (separated by commas or spaces)</p>
+    <p class="send-list-input-container">
+        <input id="folder-details-send-list" type="text" name="send-list" class="formset_input" spellcheck="false" autocomplete="off" value="">
+        <span class="email-username-matches hidden"></span>
+    </p>
+    <p class="text-right">
+        <img class="sending-image" src="<%= it.IMAGE_URL %>ajax-loader.gif">
+        <input type="submit" class="btnset3 btn_sendtofriend" name="submit" value="Send">
+    </p>
+</form>
+
+<~#~>uploadModal<~#~> <!-- Modal -->
+<div class="modal level0 <%? it.isSingleton %>singleton<%?%>">
+    <div class="modal-header">
+        <h1>Upload <%= format_plural(it.filesCount, 'item', 'items') %>...</h1>
+        <div class="modal-close-button ui-sprite" title="Close"></div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="modal-content form-loading">
+        <div class="row">
+            <img src="<%= it.IMAGE_URL %>ajax-loader-mellow-big.gif">
+        </div>
+    </div> <!--! end: div.form-loading -->
+
+    <form name="upload-to-gallery" type="post">
+        <div class="modal-content">
+            <% if (it.isSingleton) { %>
+                <div class="row">
+                    <fieldset class="default-form"> <% /* temporary... because .default-form is so generic... */ %>
+                        <textarea name="caption" placeholder="Add caption..."></textarea>
+                    </fieldset>
+                </div>
+            <% } else { %>
+                <div class="row gallery-list-container">
+                    <div class="col-left">
+                        Select Gallery
+                    </div>
+                    <div class="col-right">
+                        <div class="upload-dropdown-container">
+                            <select name="gallery" class="hidden"></select>
+                            <ul class="mlists scrollable"></ul>
+                        </div>
+                    </div> <!--! end: div.col-right -->
+                    <div class="clear"></div>
+                </div> <!--! end: div.row -->
+
+                <div class="row">
+                    <div class="col-left">
+                        <label for="upload-new-gallery-name">Create Gallery</label>
+                    </div>
+                    <div class="create-mlist">
+                        <fieldset class="default-form"> <% /* temporary... because .default-form is so generic... */ %>
+                            <input id="upload-new-gallery-name" type="text" name="gallery-name" placeholder="Enter gallery name...">
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                </div> <!--! end: div.row -->
+            <% } %>
+
+        </div> <!--! end: div.modal-content -->
+
+        <div class="modal-footer">
+            <button class="btn-action btn-startupload">
+                <span class="text">Start Upload</span>
+            </button>
+            <div class="clear"></div>
+        </div> <!--! end: div.modal-footer -->
+    </form> <!--! end: form[name=upload-to-gallery] -->
+</div> <!--! end: div.modal -->
+
+<div class="overlay"></div>
+
+<~#~>compactPaneHeader<~#~> <div class="layoutlist_wrapper <% if (it.pane != 'mine') { %>layoutlist_wrapper_feed<% } else { %>layoutlist_wrapper_myuploads<% } %>">
+    <div class="layoutlist_innerwrap">
+        <!-- Header -->
+        <div class="layoutlist_i_header border_top_2px">
+            <%? it.pane === 'mine' %>
+                <div class="layoutlist_col_select layoutlist_ih_select">
+                    &nbsp;
+                </div>
+            <%?%>
+
+            <div class="layoutlist_col_title layoutlist_ih_title">
+                <span>Title</span>
+            </div>
+
+            <div class="layoutlist_col_author layoutlist_ih_author">
+                <span>Author</span>
+            </div>
+
+            <div class="layoutlist_col_files layoutlist_ih_files">
+                <span>Files</span>
+            </div>
+
+            <div class="layoutlist_col_views layoutlist_ih_views">
+                <span>Views</span>
+            </div>
+
+            <div class="layoutlist_col_date layoutlist_ih_date">
+                <span>Date</span>
+            </div>
+
+            <div class="layoutlist_col_actions layoutlist_ih_actions">
+                <span></span>
+            </div>
+        </div> <!-- end: layoutlist_i_header -->
+    </div> <!-- end: layoutlist_innerwrap -->
+</div> <!-- end: layoutlist_wrapper -->
+
+<div class="clear"></div>
+
+<~#~>modeDropdown<~#~> <div class="viewmode_container">
+    <div class="viewmode_innerwrap">
+        <span class="vm_select border_all_2px">
+            <span class="vm_icon vm_selected_mode"></span>
+            {{ for (var i = 0, l = it.modes.length; i < l; i++) { 
+                var mode = it.modes[i];
+                if(!mode.view_type) { continue; }
+            }}
+            <span class="vm_title vm_title_{{=mode.name}}">{{= mode.display_name }} Mode</span>
+            {{
+              }
+            }}
+        </span>
+        <div class="viewmode_dropdown_container">
+            <ul class="viewmode_dropdown_ul border_all_2px">
+                {{
+                    var mode = null,
+                        mode_href = '',
+                        mode_name = '',
+                        mode_display_name = '',
+                        elem_type = it.elem_type;
+                    for (var i = 0, l = it.modes.length; i < l; i++) {
+                        mode = it.modes[i];
+                        mode_name = mode.name;
+                        mode_display_name = mode.display_name;
+                        mode_href = mode.href || '';
+                        mode_view_type = mode.view_type || '';
+                        mode_extra_class = mode.extra_class || '';
+                        mode_extra_attr = mode.extra_attr || '';
+                }}
+                    <li class="vm_li_{{= mode_name }}">
+                        <{{= elem_type }} class="vm_mode {{= mode_extra_class }}" vm="vm_icon_{{= mode_name }}" href="{{= mode_href }}" view_type="{{= mode_view_type }}" {{= mode_extra_attr }}>
+                            <span class="vm_mode_innerwrap">
+                                <span class="vm_icon vm_icon_{{= mode_name }}"></span>
+                                <span class="vm_name">{{= mode_display_name }} Mode</span>
+                            </span>
+                        </{{= elem_type }}>
+                    </li>
+
+                {{
+                    }
+                }}
+            </ul>
+        </div>        
+    </div>
+</div>
+
+<~#~>galleryBackButton<~#~> <span>
+    <span class="back_arrow"></span><%= it.backBtnTxt %>
+</span>
+<~#~>msgOverlay<~#~> <div id="<%= it.overlay_id %>">
+    <div class="global_notification_overlay"></div>
+    <div class="global_notification_container gnc_guestgallery">
+        <div class="global_notification_innerwrap">
+            <div class="global_notification_messages <% if (it.one_line_msg) { %>one_line_message<% } %>">
+                <p class="gnc_message"><%= it.msg %></p>
+            </div>
+
+            <div class="global_notification_actions">
+                <% if (it.yes_btn_text) { %>
+                    <span class="btn gnc_createaccount gnc_yes_btn"><%! it.yes_btn_text %></span>
+                <% } %>
+                <% if (it.no_btn_text) { %>
+                    <span class="btn gnc_notnow gnc_no_btn"><%! it.no_btn_text %></span>
+                <% } %>
+            </div> 
+        </div>
+    </div>
+</div>
+<~#~>remoteUploaderPics<~#~> <div id="remotepost_div" class="remoteupload_container">
+    <div class="remoteupload_container_innerwrap">
+
+        <h3 class="remoteupload_ci_h3">
+            <span class="remoteupload_cih_innerwrap colorset_hard">Select images for the <%? it.isNewGallery %>new<%?%> folder</span>
+        </h3>
+        <div class="clear"></div>
+        <div id="remote_folder_select">
+        </div>
+
+        <div class="error hide remoteupload_cifc_p">
+            <span class="error_msg">These images could not be uploaded.</span> <a href="#">Go to the folder</a>
+        </div>
+
+        <form class="remoteupload_ci_formcontainer" id="post_remote" method="POST" action="/api/remote_post/">
+            <button type="submit" class="submit_remote_pics btnSet btnSet3 btnSet3_remoteupload btnSet3_remoteupload_upload">
+                <span class="btnSet_innerwrap">
+                    <span class="btnSet_innerwrap_value">Upload</span>
+                </span>
+            </button>
+            <div class="empty_error">
+            <span class="error_msg">Click on the images to select.</span>
+            </div>
+            <div class="clear"></div>
+            <div id="remote_images" class="remoteupload_ci_gallerycontainer"></div>
+        </form>
+
+        <div class="clear"></div>
+    </div>
+</div>
+<~#~>gallerySelectedOptions<~#~> <% if (it.is_editor || !it.is_anonymous) { %>
+    <div class="item-checkbox-display-toggle panecontrols_icr_dropwrapper panecontrols_icr_dropwrapper_batch no-icons">
+        <a class="btn-toggle-select-mode" href="#">
+            <span>Select Items</span>
+            <span class="cancel-select-mode">Cancel Selection</span>
+        </a>
+    </div>
+<% } %>
+
+<div class="item-batch-inner-container">
+    <div class="item-batch-selected">
+        <span class="item-batch-num-selected"></span> Selected
+        <a href="#" class="item-batch-deselect">(Deselect All)</a>
+    </div>
+    <div class="item-batch-action panecontrols_icr_dropwrapper panecontrols_icr_dropwrapper_batch no-icons"> <!-- start: item-batch-action -->
+        <a href="#">Action <span class="arrow arrowdown"></span></a>
+
+        <div class="pane-dropdown-wrapper">
+            <ul class="panecontrols_icrd_dropdown">
+                <% if (!it.is_anonymous) { %>
+                    <li>
+                        <a href="#" class="mass_copy">
+                            <span class="value">Save selected files into...</span>
+                        </a>
+                    </li>
+                <% } %>
+                <% if (it.is_editor && !it.is_anonymous) { %>
+                    <li>
+                        <a href="#" class="mass_move">
+                            <span class="value">Move selected files into...</span>
+                        </a>
+                    </li>
+                <% } %>
+                <% if (it.is_authorized_to_delete) { %>
+                <li>
+                    <a href="#" class="mass_delete">
+                        <span class="value">Delete selected files</span>
+                    </a>
+                </li>
+                <% } %>
+                <li class="dropdown-description">
+                    <a>
+                        <span class="value">Select files to see actions</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- end: item-batch-action -->
+</div>
+<~#~>followTagRow<~#~> <%? it.tags.length %>
+  <ul class="tag_ul">
+    <li>Tags:&nbsp;</li>
+<% for (var i = 0, l = it.tags.length; i < l; i++) { %>
+<li class="tag_li">
+  <a class="btnSet btnSet1" href="/explore/<%=it.tags[i].tag %>"><%=it.tags[i].tag%></a><%? i < l -1 %><span class="grscul_middot">&nbsp;·&nbsp;</span><%?%>
+</li>
+<% } %>
+  </ul>
+  <%?%><~#~>compactPaneHeader_<~#~> <div class="vp_list_row vp_list_row_head resultsheader">
+  <% /* %><div class="vp_list_col vp_list_cell_fav">&nbsp;</div><% */ %>
+  <div class="vp_list_col vp_list_cell_title">Title</div>
+  <% if (it.pane != 'mine') { %>
+  <div class="vp_list_col vp_list_cell_author">Author</div>
+  <% } %>
+  <div class="vp_list_col vp_list_cell_files">Files</div>
+  <div class="vp_list_col vp_list_cell_views">Views</div>
+  <div class="vp_list_col vp_list_cell_date">Date</div>
+  <div class="vp_list_col vp_list_cell_dropdown"></div>
+</div>
+<~#~>uploadModalPrettySelect<~#~> <% 
+    var galleryVars;
+    for (var i = 0, l = it.galleryList.length; i < l; i++) { 
+        galleryVars = it.generateGalleryVarsFunc(it.galleryList[i]);
+%>
+        <li data-id="<%= galleryVars.id %>">
+            <span class="mlist-name"><%= galleryVars.name %></span>
+            <span class="mlist-itemcount"><%= galleryVars.itemCount %></span>
+            <span class="clear"></span>
+        </li>
+<%
+    }
+%>
+<~#~>followboxEntry<~#~> <~#~>galleryFeatures<~#~> <%? (it.isEditor || it.isContributor) %>
+<div id="gallery-subheader-dropzone-wrapper" class="grid dropzone-brick">
+        <div id="gallery-subheader-upload-btn" class="top">
+            <div class="left-side">
+                <span class="ui-sprite icon"></span>
+            </div>
+            <% if (it.isValidBrowser) { %>
+            <div class="right-side">
+                <a class="message-drag" href="javascript: void(0);">Drag &amp; Drop files anywhere to add more</a>
+                <a class="message-select" href="javascript: void(0);">Select Your Files</a>
+            </div>
+            <% } else { %>
+            <div class="right-side">
+                <a class="message-select" style="display: block !important;" href="javascript: void(0);">Select Your Files</a>
+            </div>
+            <% } %>
+            <div class="clear"></div>
+        </div>
+        <div class="bottom">
+            <a id="gallery-subheader-remote-upload-btn" class="btn-action btn-fromweb tooltip-below" href="javascript:void(0);" tooltip="Upload screenshot or images from URL">
+                <span class="text">Upload From Web</span>
+            </a>
+            <a class="btn-action btn-alluploads tooltip-below" href="<%= it.creatorHref %>uploads/all" tooltip="View all uploads">
+            <span class="text">My Uploads</span>
+        </a>
+            <div class="clear"></div>
+        </div>
+ </div>
+<%?%>
+
+
+<!-- Folder Name, Avatar, Username, Follow, Time: This will be the base for the header -->
+<%? it.isEmbedded %>
+    <div class='node_gallerydetails_container'>
+        <h1 class='subheader_galleryname subheader_noneditor'><%= it.galleryName %></h1>
+        <div class='ngc_avatar'>
+            <a href='<%= it.creatorHref %>'>
+                <img src='<%= it.ngcAvatarImg %>' />
+            </a>
+        </div>
+        <div class='ngc_titles'>
+            <p class='usertime'>
+                <span>by</span>
+                <% if (it.creatorName) { %>
+                    <a class='text_link_dark' href='<%= it.creatorHref %>'
+                        style='max-width: 260px; text-overflow: ellipsis; overflow: hidden;'
+                            target="_blank"
+                    ><%= it.creatorName %></a>
+                <% } else { %>
+                    Guest
+                <% } %>
+                <span><%= it.galleryCreationDate %></span>
+            </p>
+        </div>
+    </div>
+<%?%>
+
+<!-- Accordion -->
+<% if (!it.isEmbedded) { %>
+<div class="editor-accordion">
+
+	<ul>
+		<% if( it.editorTags.length > 0 || it.isEditor || it.isModerator) { %>
+		<li class="accordion-tags isOpen">
+			<h3 class="accordion-title">
+				<span class="icon ui-sprite"></span>
+				<span class="text"><% if (it.isEditor) { %> <% if(it.editorTags.length > 0) { %>Edit Tags<% } else { %>Tag This Folder<% } %> <% } else { %>Tags <% } %></span>
+				<% if (it.isEditor) { %><span class="text right">Editor Mode: On</span><% } %>
+			</h3>
+			<div class="section">
+				<% if (!it.isEditor) { %>
+            <ul class="editor-accordion-populartags editor-accordion-viewertags" <% if (it.isModerator) { %>style="display: block"<% } %> >
+                <% for( i = 0; i <= it.editorTags.length -1; i++ ) { %>
+                <li>
+                    <a href="/explore/<%= it.editorTags[i] %>"><%= _.escape(it.editorTags[i]) %></a>
+                </li>
+                <% } %>
+            </ul>
+						<div class="clear"></div>
+        <% } %>
+
+				<% if (it.isEditor || it.isModerator) { %>
+            <div id="editor-accordion-tagscontainer">
+                <% /* gallery_tags_textarea id is used by the 't' shortcut key */ %>
+                <textarea id="gallery_tags_textarea" class='inline_edit edit_always_visible editor'
+                    placeholder='Add tags' spellcheck='false' id='<%= it.tagFieldId %>'></textarea>
+                <img src='http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader.gif' class='ftags_loader editor' style='display: none;' />
+
+                <ul class='editor-accordion-populartags editor'>
+                    <li class='first-li'>Popular:</li>
+                </ul>
+								<div class="clear"></div>
+
+								<p class="tags-note">Note: Tags are separated by space, hit enter to save. Use Tags to increase popularity.</p>
+            </div>
+        <% } %>
+
+			</div>
+		</li>
+    <% } else { %>
+			<li class="accordion-tags" <% if (!it.isEditor) { %>style="display: block;"<% } %>>
+				<h3 class="accordion-title">
+					<span class="icon ui-sprite"></span>
+					<span class="text">Tags</span>
+				</h3>
+				<div class="section">
+					Not tagged
+				</div>
+			</li>
+    <% } %>
+
+		<% if (it.isEditor) { %>
+		<li class="accordion-contributors">
+			<h3 class="accordion-title">
+				<span class="icon ui-sprite"></span>
+				<span class="text"><% if (it.contributorLink) { %>Manage Contributors<% } else { %>Invite Contributors<% } %></span>
+			</h3>
+			<div class="section">
+            <% if (!LOGIN_USERNAME) { %>
+                Please sign in to get the contributor link.</p>
+            <% } else { %>
+                <% if (it.contributorLink) { %>
+                    <input id="contributor_link" type="text" value="<%=it.contributorLink%>"/>
+                    <button class="btn-action" id="reset_contributor_link">Reset link</button>
+										<div class="clear"></div>
+                <% } else { %>
+                    <button class="btn-action" id="get_contributor_link">Get contributor link</button>
+                    <input id="contributor_link" type="text" class="no_display "/>
+										<div class="clear"></div>
+                <% } %>
+
+                <% if (it.contributors){ %>
+
+									<h4>Contributors:</h4>
+
+                    <% for (var i = 0; i < it.contributors.length; i++) { %>
+							<div class="<% if (it.contributors[i].active) { %>contrib_active<% }else{ %>contrib_inactive<% } %>">
+								<a href="/<%=it.contributors[i].slug %>"><%=it.contributors[i].display_name %></a>
+								<span id="contrib_ban" data-slug="<%=it.contributors[i].slug %>"> (remove)</span></div>
+                    <% } %>
+                <% } %>
+            <% } %>
+
+			</div>
+		</li>
+		<% } %>
+
+		<li class="accordion-options">
+			<h3 class="accordion-title">
+				<span class="icon ui-sprite"></span>
+				<span class="text">Options</span>
+			</h3>
+			<div class="section section-actions">
+
+			<!-- permission start -->
+			<% if (it.isEditor || it.isModerator) { %>
+			<h4>Folder Permission</h4>
+
+			<div class="inner-container">
+				<% /* ids are used for the 'p' shortcut key */ %>
+				<div id="gallery_permission_public" class='visibility_public_wrap' access_val="public">
+					<input type="radio" class="visibility_checkbox" <% if (it.isPublic) { %>checked="checked"<% } %>>
+					<span class="visibility_form_checkbox">Public</span>
+				</div>
+				<div id="gallery_permission_private" class="visibility_private_wrap" access_val="private">
+					<input type="radio" class="visibility_checkbox" <% if (!it.isPublic) { %>checked="checked"<% } %>>
+					<span class="visibility_form_checkbox">Private</span>
+				</div>
+			</div>
+
+			<!-- permissions end -->
+			<% } %><!-- permission start -->
+
+				<!-- Actions: Download All, Set View Mode, Delete Folder, etc., Temporary Location -->
+				<ul>
+					<% if (it.isModerator) { %>
+						<li class="action-item gal_feature_item">
+							<a href='javascript: void(0)' class='featurebtn' style="display:none">Feature</a>
+							<a href='javascript: void(0)' class='unfeaturebtn' style="display:none">Unfeature</a>
+						</li>
+					<% } %>
+
+					<% if (it.isLoggedIn) { %>
+						<% if (it.isModerator) { %>
+							<li class="action-item gal_flag_mlist">
+								<a class='flag_mlist' href='javascript:void(0);'>Flag All Files in Folder</a>
+							</li>
+							<li class="action-item gal_unflag_mlist">
+								<a class='unflag_mlist' href='javascript:void(0);'>Clear Folder Flags</a>
+							</li>
+						<% } %>
+					<% } %>
+
+					<% if (it.isEditor || it.isAuthorizedToDelete) { %>
+						<li class="action-item">
+							<a class='delete_folder' href='javascript: void(0)'>Delete Folder</a>
+						</li>
+					<% } %>
+				</ul>
+
+			</div>
+		</li>
+	</ul>
+
+</div>
+<div class="clear"></div>
+
+<% } %> <!-- accordion ends here -->
+
+<div class="grid shortlink-brick link-container <%? !it.readerUrl %>hidden<%?%>"></div>
+<~#~>galleryDetails<~#~> <div class='details_container'>
+    <div class='leftcol_container <%? !it.isEditor && !it.isModerator %>has-no-right-column<%?%>'>
+        <div class='node_leftcol_pager'>
+            <span class='arrowLeft'></span>
+            <span class='arrowRight'></span>
+            <p class='subheader_pager'></p>
+        </div>
+
+        <div class='subheader_filename'></div>
+        <div class='fileinfoactions'></div>
+        <div class="clear"></div>
+    </div>
+
+    <%? it.isEditor || it.isModerator || it.isEmbedded %>
+        <div class='rightcol_container'></div>
+    <%?%>
+
+    <div class='details'></div>
+
+    <% if (it.isEmbedded) { %>
+        <div class='clear'></div>
+    <% } %>
+
+</div>
+
+
+<~#~>shortcutsList<~#~> <div class="shortcuts_modal">
+
+    <h3 class="colorset_hard">Folder Shortcuts</h3>
+
+    <div class="shortcut_list">
+        <% 
+            var shortcutsList = null,
+                shortcut = null,
+                group = null; 
+            for (var groupName in it.shortcuts) { 
+                if (it.shortcuts.hasOwnProperty(groupName)) {
+                    shortcutsList = it.shortcuts[groupName];
+                    group = it.shortcutGroups[groupName];
+        %>
+                    <div>
+                        <%? group.header %>
+                            <h4><%= group.header %></h4>
+                        <%?%>
+                            <%
+                                for (var key in shortcutsList) {
+                                    if (shortcutsList.hasOwnProperty(key)) {
+                                        shortcut = shortcutsList[key];
+                            %> 
+                                    <dl>
+                                        <dt>
+                                            <span>
+                                            <% if (shortcut.textDisplay) { %>
+                                                <%= _.escape(shortcut.textDisplay) %>
+                                            <% } else { %>
+                                                <%= key %>
+                                            <% } %>
+                                            </span>
+                                        </dt>
+                                        <dd><%= shortcut.description %></dd>
+                                    </dl>
+                            <%
+                                    }
+                                }
+                            %> 
+                    </div>
+        <% 
+                }
+            }
+        %>
+    </div>
+
+</div>
+<~#~>galleryGrid<~#~> <%
+    var item, item_vars;
+    for (var i = it.start_idx, l = it.items.length; (i <= it.end_idx && i < l); i++) {
+        item = it.items[i];
+        item_vars = it.generate_item_vars_func(item);
+%>
+        <div <% if (item_vars.node_id) { %>id="<%= it.id_prefix %><%= item_vars.node_id %>"<% } %>
+            <% if (item_vars.node_add_attr) { %> <%= item_vars.node_add_attr %><% } %>
+            class="
+                    grid itemnode grid_item masonry_item
+                    <%? it.is_authorized_to_delete %>authorized_delete<%?%>
+                    <%? item_vars.is_not_viewable_mature %>mature_content<%?%>
+                    <%? !item_vars.id %>item-uploading<%?%>
+                    <%? item_vars.user_vote === 'up' %>item-liked<%?%>
+                    <%? item_vars.is_playable %>item-playable<%?%>
+                  ">
+
+            <%? (it.is_editor || it.isLoggedIn) %>
+                <div class="grid-item-checkbox">
+                    <label class="minus-checkbox-wrapper" <%? item_vars.id %>for="<%= it.checkboxPrefix %><%= item_vars.id %>"<%?%>>
+                        <input class="item_checkbox" type="checkbox" <%? item_vars.id %>id="<%= it.checkboxPrefix %><%= item_vars.id %>"<%?%>value="<%= item_vars.id %>">
+                        <span class="ui-sprite icon"></span>
+                    </label>
+                </div>
+            <%?%>
+
+            <div class="item">
+                <% if (!item_vars.is_not_viewable_mature) { %>
+                    <div class="actions-left">
+                        <% if (!item_vars.is_not_viewable_mature) { %>
+                            <div class="voting" data-item_id="l<%=item_vars.id %>" data-voted="<%= item_vars.user_vote %>">
+                                <a class="vote_up btn-action btn-like <%? item_vars.vote_up_count === 0 %>no-counter<%?%>">
+                                    <span class="ui-action-sprite icon-text">
+                                        <span class="ui-sprite icon"></span>
+                                        <span class="text">Like</span>
+                                    </span>
+                                    <span class="ui-action-sprite counter"><%= item_vars.vote_up_count %></span>
+                                </a>
+                            </div>
+                        <% } %>
+                        <div class="btn-action no-text btn-addto no-counter" data-item-id="<%= item_vars.id %>">
+                            <span class="ui-action-sprite icon-text">
+                                <span class="ui-sprite icon"></span>
+                            </span>
+
+                            <div class="add-to-drop">
+                                <h4>Add to: </h4>
+                                <div class="folder-list-loading message">
+                                    Loading...
+                                </div>
+                                <div class="folder-list-error message">
+                                    Error retrieving folder list. Please try again.
+                                </div>
+                                <div class="no-folders message">
+                                    No Folders.
+                                </div>
+
+                                <ul class="no-highlight"></ul>
+
+                                <div class="add-new-folder">
+                                    <form type="post">
+                                        <input name="id" type="hidden" value="<%= item_vars.id %>">
+                                        <input name="new-folder-name" type="text" placeholder="Create new folder...">
+                                        <input class="btn-action" name="submit" type="submit" value="Add">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% if (IS_MODERATOR) { %>
+                            <a href="javascript: void(0)" class="btn-action no-text btn-feature" data-item-id="<%=item_vars.id %>" data-featured="<%= item.is_featured %>">
+                                <span class="ui-sprite icon"></span>
+                            </a>
+                        <% } %>
+                    </div> <!-- end: actions-left -->
+
+                    <div class="actions-right">
+                        <a tooltip="<%= item_vars.downloadTitle %>"
+                            class="grid-download-element btn-action btn-download no-counter tooltip-below <%? !item_vars.link %>hidden<%?%>"
+                            <%? item_vars.link %>
+                                href="<%= item_vars.link %>" target="_blank"
+                            <%?%>
+                        >
+                            <span class="icon-text">
+                                <span class="ui-sprite icon"></span>
+                                <span class="text"></span>
+                            </span>
+                        </a>
+                    </div> <!-- end: actions-right -->
+
+                    <div class='set-cover-section-grid<% if (it.is_editor && item_vars.has_thumbnail) { %> visible<% } %>'>
+                        <a class="set-cover-grid btn-action<%? item_vars.is_cover %> on<%?%>"><span class="text">Set as Cover</span></a>
+                    </div>
+
+                    <a
+                        class="
+                                grid_imganchor
+                                item-modal-link
+                                <%? !item_vars.id %>hidden<%?%>
+                              "
+                        <%? (item_vars.pageLink && !item_vars.is_not_viewable_mature) %>
+                            href="<%= item_vars.pageLink %>"
+                        <%?%>
+                    >
+                        <span class="play-icon"></span>
+
+                        <img class="grid_item_thumb"
+                            <%? item_vars.src_img %>
+                                src="<%= item_vars.src_img %>"
+                            <%?%>
+                            <%? (item_vars.grid_width > 0 && item_vars.grid_height > 0) %>
+                                width="<%= item_vars.grid_width %>"
+                                height="<%= item_vars.grid_height %>"
+                            <%?%>
+                        >
+                    </a>
+
+                    <%? !item_vars.id %>
+                        <div class="progress-center-wrapper">
+                            <div class="progress-center-cell">
+                                <span class="grid-item-uploading <%? item_vars.upload_percent > 0 %>upload-started<%?%>">
+                                    <% if (!item_vars.id) { %>
+                                        <span class="upload_progress_wrapper">
+                                            <% if (item_vars.is_progress_supported) { %>
+                                                <span class="upload-queued-msg">Upload Queued</span>
+                                                <br>
+                                                <span class="quota_field black">
+                                                    <span class="quota_bar orange" style="width: <%= item_vars.upload_percent %>%;"></span>
+                                                </span>
+                                                <span class="text_percent"><%= item_vars.upload_status_text.percent %></span>
+                                                <br>
+                                                <span class="text_bytes"><%= item_vars.upload_status_text.bytes %></span>
+                                                <br>
+                                                <span class="text_speed"><%= item_vars.upload_status_text.speed %></span>
+                                            <% } else { %>
+                                                <%= it.txt.uploading %>
+                                            <% } %>
+                                        </span>
+                                    <% } %>
+                                </span>
+                            </div> <!-- end: progress-center-cell -->
+                        </div> <!-- end: progress-center-wrapper -->
+                    <%?%>
+
+                <% } else { %>
+                    <div class="hide_mature grid_imganchor">
+                        <span class="ui-sprite icon"></span>
+                        <span class="text">
+                            <strong>Mature Content</strong>
+                            <br>
+                            <% if (it.isLoggedIn) { %>
+                                User discretion is advised.
+                                <br>
+                                To disable Safety Mode, update your <a href="/pref">settings</a>.
+                            <% } else { %>
+                                <a href="#" class="link-sign-in">Sign in</a> or
+                                <a href="#" class="link-sign-up">create an account</a> to view this content.
+                            <% } %>
+                        </span>
+                    </div>
+                <% } %>
+            </div> <!-- end: item -->
+
+            <div class="details">
+                <%? !item_vars.is_image %>
+                    <div class="details-section filename">
+                        <div class="grid_item_info_text">
+                            <p class="item_filename tooltip-above <%? !item_vars.filename_ext %>no-extension<%?%>" tooltip="<%= item_vars.filename_encoded %>">
+                              <span class="item_filename_name"><%= item_vars.filename_only %></span>
+                              <span class="item_filename_extension">
+                                <%? item_vars.filename_ext %>
+                                    .<%= item_vars.filename_ext %>
+                                <%?%>
+                                </span>
+                            </p>
+                            <p class="clear"></p>
+                            <p>
+                                <a class="grid-download-element grid_dl_link <%? !item_vars.link %>hidden<%?%>"
+                                    <%? item_vars.link %>
+                                        href="<%= item_vars.link %>"
+                                        target="_blank"
+                                    <%?%>
+                                >
+                                Download (<%= item_vars.filesize %>)
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                <%?%>
+
+
+                <div class="
+                                details-section
+                                item-description
+                                item-desc-container
+                                <%? !item_vars.description %>empty_mode<%?%>
+                            "
+                >
+                    <div class="item-desc-read-only">
+                        <p>
+                            <span class="desc">
+                                <%= item_vars.description %>
+                            </span>
+                            <%? it.is_editor %>
+                                <a class="link-with-icon link-description item-edit-description" href="#">
+                                    <span class="ui-sprite icon"></span>
+                                    <span class="text">Edit description</span>
+                                </a>
+                            <%?%>
+                        </p>
+                    </div> <!--! end: item-desc-read-only -->
+
+                    <%? it.is_editor %>
+                        <div class="item-desc-edit">
+                            <form class="default-form" action="" method="post">
+                                <fieldset class="item-desc-field">
+                                    <textarea class="inline_edit textarea_box edit_always_visible" name="description" placeholder="Add a description for this item." spellcheck="false"><%= item_vars.descriptionRaw %></textarea>
+                                </fieldset>
+                                <fieldset class="item-desc-actions">
+                                    <button name="submit" type="submit" class="btn-action">Save</button>
+                                    <div class="saving-container">
+                                        Saving
+                                        <img src="<%= it.IMAGE_URL %>ajax-loader-bar-small.gif">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    <%?%>
+
+                </div> <!-- end: .details-section.item-description -->
+                
+                <%? (item_vars.origGallery && item_vars.isOrigInfoDisplayable) %>
+                    <div class="details-section credits">
+                        From 
+                        <a class="folder_name" href="<%= item_vars.origGallery.url %>"><%= _.escape(item_vars.origGallery.name) %></a>
+                        via
+                        <% if (item_vars.origGallery.profile) { %>
+                            <a class="author_name" href="<%= item_vars.origGallery.profile %>"><%= _.escape(item_vars.origGallery.displayName) %></a>
+                        <% } else { %>
+                            <%= _.escape(item_vars.origGallery.displayName) %>
+                        <% } %>
+                    </div>
+                <%?%>
+
+                <%? it.is_editor %>
+                    <div class="details-section quick-share-links-container">
+                        <%? item_vars.is_image %>
+                            <p class="quick-direct-link">
+                                <label <%? item_vars.id %>for="grid-direct-link-<%= item_vars.id %>"<%?%>>
+                                    Direct Link
+                                </label>
+                                <input type="text" class="input-link" <%? item_vars.id %>id="grid-direct-link-<%= item_vars.id %>" value="<%= item_vars.directLink %>"<%?%> spellcheck="false" readonly="readonly">
+                            </p>
+                        <%?%>
+                        <p class="quick-full-mode-link">
+                            <label <%? item_vars.id %>for="grid-full-mode-link-<%= item_vars.id %>"<%?%>>
+                                <% if (item_vars.is_image) { %>
+                                    Image Link
+                                <% } else { %>
+                                    File Link
+                                <% } %>
+                            </label>
+                            <input type="text" class="input-link" <%? item_vars.id %>id="grid-full-mode-link-<%= item_vars.id %>" value="<%= item_vars.fullModeLink %>"<%?%> spellcheck="false" readonly="readonly">
+                        </p>
+                    </div> <!-- end: .details-section.quick-share-links-container -->
+                <%?%>
+
+            </div> <!-- end: details -->
+
+            <div class="clear"></div>
+
+        </div> <!-- itemnode -->
+
+<%
+    }
+%>
+
+<~#~>galleryWrapper<~#~> <div id="<%= it.wrapperID %>" class="gallery_wrapper gallery_view"> <!-- start: gallery_wrapper -->
+    <div class="subheader_container">
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="presenter_main viewport_container"> <!-- start: presenter_main -->
+        <div class="scene"></div>
+
+        <div class="prev_item">
+            <div class="middler">
+                <a class="middler_prev"></a>
+            </div>
+        </div>
+        <div class="next_item">
+            <div class="middler">
+                <a class="middler_next"></a>
+            </div>
+        </div>
+    </div> <!-- end: presenter_main -->
+
+</div> <!-- end: gallery_wrapper -->
+<div class="clear"></div>
+<~#~>setViewerMode<~#~> <div class='setdefaultlayout_wrapper set_viewer_mode_modal'>
+  <div class="setdefaultlayout_innerwrap">
+    
+    
+    <div class="setdefaultlayout_leftcol">
+      <div class="setdefaultlayout_l_innerwrap">
+        <span class="setdefaultlayout_li_icon"></span>
+      </div>
+    </div>
+    
+    <div class="setdefaultlayout_rightcol">
+      <div class="setdefaultlayout_r_innerwrap">
+        <h3><strong>Set Default Layout</strong></h3>
+        <p>Choose a default layout for viewers.</p>
+        <div class='error hidden'>Viewer mode could not be set.</div>
+        <div class='viewer_mode_options'>
+          <span class="setdefaultlayout_ri_iconwrap" data-mode="list">
+            <span class="setdefaultlayout_ri_iconlist"></span>
+          </span>
+          <span class="setdefaultlayout_ri_iconwrap" data-mode="grid">
+            <span class="setdefaultlayout_ri_icongrid"></span>
+          </span>
+          <span class="setdefaultlayout_ri_iconwrap" data-mode="slide">
+            <span class="setdefaultlayout_ri_iconslide"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<~#~>tooltip<~#~> <div class="tooltip_container tc_profile1">
+	<div class="tooltip_innerwrap">
+		
+		<!-- Up Arrow -->
+		<span class="tooltip_arrow tooltip_arrowup"></span>
+		<span class="tooltip_arrow tooltip_arrowdown"></span>
+		<span class="tooltip_arrow tooltip_arrowright"></span>
+		
+		<div class="tooltip_top">
+			<div class="tooltip_top_leftside"><%=it.left_text%></div>
+			<div class="tooltip_top_rightside"><%=it.right_text%></div>
+		</div>
+		<div class="clear"></div>
+		<div class="tooltip_bottom">
+			<div class="tooltip_bottom_innerwrap">
+			  <% if(it.is_last) { %>
+				<a href="javascript: void(0)" class="btnset2 btn_toolclose">Close</a>
+				<% } else { %>
+				<a href="javascript: void(0)" class="btnset2 btn_tooltip_action"><%=it.action_button_text%></a>
+			  <% } %>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<~#~>errorModal<~#~> <div class="modal level0">
+    <div class="modal-content">
+        <div class="row">
+            <div class="col-left">
+                <span class="icon error-grey ui-sprite"></span>
+            </div> <!--! end: div.col-left -->
+            <div class="col-right">
+                <% if (it.isList) { %>
+                    <% for (var i = 0, l = it.msg.length; i < l; i++) { %>
+                        <%= it.msg[i] %>
+                        <%? (i < (l - 1)) %><br><%?%>
+                    <% } %>
+                <% } else { %>
+                    <%= it.msg %>
+                <% } %>
+            </div> <!--! end: div.col-right -->
+            <div class="clear"></div>
+        </div> <!--! end: div.row -->
+    </div> <!--! end: div.modal-content -->
+
+    <div class="modal-footer">
+        <a class="btn-action btn-confirm" href="#">
+            <span class="text">
+                <% if (it.confirmText) { %>
+                    <%= it.confirmText %>
+                <% } else { %>
+                    Okay
+                <% } %>
+            </span>
+        </a>
+    </div> <!--! end: div.modal-footer -->
+</div> <!--! end: div.modal -->
+
+<div class="overlay"></div>
+<~#~>gallerySubheader<~#~> <div class="subheader_innerwrap">
+
+    <%? !it.isEmbedded %>
+        <div class="folder-header-container">
+            <div class="folder-info folder-header-sticky">
+                <div class="folder-other-info">
+                    <div class="folder-stat">
+                        <span class="stat-val"><%= it.galleryItemsNumber %></span>
+                        <span class="stat-desc">Items</span>
+                    </div>
+
+                    <div class="folder-stat">
+                        <span class="stat-val"><%= it.galleryViews %></span>
+                        <span class="stat-desc">Total Views</span>
+                    </div>
+
+                    <div class="item-batch-container"></div>
+
+                    <div class="last-el">
+                        <a class="global_infolink" href="javascript: void(0)">i</a>
+                    </div>
+
+                </div>
+
+                <div class="folder-main-info">
+                    <div class="folder-user-avatar">
+                        <% if (it.creatorProfileLink) { %>
+                            <a href="<%= it.creatorProfileLink %>"><img src="<%= it.creatorAvatar %>"></a>
+                        <% } else { %>
+                            <img src="<%= it.creatorAvatar %>">
+                        <% } %>
+                    </div>
+                    <div class="folder-main-info-text">
+                        <div class="folder-name">
+                            <h1><span><%= it.galleryName %></span>
+
+                            <% if (it.isEditor) { %>
+                                <a class="link-with-icon rename-folder" href="javascript: void(0)">
+                                    <span class="ui-sprite icon"></span>
+                                    <span class="text">Rename</span>
+                                </a>
+                            <% } %>
+
+                            </h1>
+                        </div>
+
+                        <div class="folder-other-main-info">
+                            <% if (it.creatorName) { %>
+                                <a class="link-with-icon link-user" href="<%= it.creatorProfileLink %>">
+                                    <span class="ui-sprite icon"></span>
+                                    <span class="text"><%= it.creatorName %></span>
+                                </a>
+
+                                <% if (!it.isEditor && !it.isEmbedded) { %>
+                                    <div class="folder-follow-creator">
+                                        <a href="#"
+                                            <% if (it.isFollowing) { %>
+                                                title="Unfollow <%= it.creatorName %>"
+                                            <% } else { %>
+                                                title="Follow <%= it.creatorName %>"
+                                            <% } %>
+                                            class="<% if (it.isFollowing) { %>btn-unfollow<% } else { %>btn-follow<% } %>"
+                                            data-target="<%= it.creatorSlug %>"
+                                            data-status="<% if (it.isFollowing) { %>follow<% } else { %>unfollow<% } %>"
+                                        >
+                                            (<span class="text"><% if (it.isFollowing) { %>Unfollow<% } else { %>Follow<% } %></span>)
+                                        </a>
+                                    </div>
+                                <% } %>
+                            <% } else { %>
+                                Guest
+                            <% } %>
+                            <span><%= it.galleryCreationDate %></span>
+                            <% if (!it.isEditor && !it.isModerator && it.galleryTags.length > 0) { %>
+                                <span class="middot">&middot;</span>
+                                <ul class="folder-tags">
+                                    <% for (var i = 0, l = it.galleryTags.length; i < l; i++) { %>
+                                        <li>
+                                            <%? i === 0 %><span class="ui-sprite icon"></span><%?%>
+                                            <a href="<%= minus.Links.reverse('exploreTags', [it.galleryTags[i]]) %>"><%= _.escape(it.galleryTags[i]) %></a><%? i !== (l-1) %>,<%?%>
+                                        </li>
+                                    <% } %>
+                                </ul>
+                            <% } %>
+                        </div>
+                        <a class="see-more" href="javascript: void(0)">
+                          <span class="icon ui-sprite"></span>
+                          <span class="text">More</span>
+                        </a>
+
+                        <%? it.isContributor %>
+                            <div>
+                                You can upload new files into this folder.
+                            </div>
+                        <%?%>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+            </div> <!-- end: folder-info -->
+        </div> <!-- end: folder-header-container -->
+    <%?%>
+</div>
+
+<~#~>galleryGridContainer<~#~> <div class="grid_mode_container">
+    <div class="grid_view_loading"></div>
+    <%? it.isEditor || it.isModerator %>
+        <div class="grid_gallery_details masonry_item"></div>
+    <%?%>
+    <div class="grid_items_container"></div>
+    <div class="clear"></div>
+</div>
+
+<~#~>itemPageUploading<~#~> <div class="lpage_innerwrap">
+    <div class="item-view is-uploading">
+        <div class="body item">
+            <div class="uploading-container <%? it.uploadStats.percentNumber > 0 %>upload-started<%?%>">
+                <h3>
+                    <span class="upload-queued-msg">Upload Queued:</span>
+                    <span class="uploading-msg">Uploading</span>
+                    <%= it.name %>
+                </h3>
+
+                <div class="upload-progress-wrapper <%? !it.showUploadProgress %>hidden<%?%>">
+                    <div class="upload-progress">
+                        <div class="quota_field white upload">
+                            <div 
+                                class="quota_bar orange" 
+                                <%? it.uploadStats %>style="width: <%= it.uploadStats.percentNumber %>%;"<%?%>
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-stat-wrapper">
+                        <div class="upload-stat">
+                            <span class="text-bytes"><%? it.uploadStats %><%= it.uploadStats.bytes %><%?%></span>
+                            <span class="text-percent"><%? it.uploadStats %><%= it.uploadStats.percent %><%?%></span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- body item ends -->
+    </div> <!-- item-view ends -->
+</div>
+<~#~>gallerySelectList<~#~> <ul class="modal_list_gallery">
+    <%
+        var l = it.galleries.length,
+            gal = null,
+            unselectable = false,
+            item_count_text = '',
+            same_gallery;
+        for (var i = 0; i < l; i++) {
+            gal = it.galleries[i];
+            gal_name = gal.name || it.txt.untitled;
+            unselectable = (gal.item_count + it.num_selected) > it.num_max_items;
+            item_count_text = format_plural(gal.item_count, it.txt.file, it.txt.files);
+            same_gallery = it.current_gallery_id ? gal.editor_id === it.current_gallery_id : false;
+    %>
+            <li <% if (unselectable) { %>
+                    class="unselectable opacity_50"
+                <% } %>
+                <% if (same_gallery) { %>
+                    style="display:none;"
+                <% } %>
+                gallery_id="<%= gal.editor_id %>"
+                >
+                    <% if (unselectable) { %>
+                        (<%= item_count_text %>)
+                    <% } %>
+                    <%= gal_name %>
+            </li>
+    <%
+        }
+    %>
+</ul>
+
+<~#~>remoteUploaderForm<~#~> <div id="remotepost_div" class="remoteupload_container">
+	<div class="remoteupload_container_innerwrap">
+
+	  <h3 class="remoteupload_ci_h3">
+			<span class="remoteupload_cih_innerwrap colorset_hard">Upload Images from Web</span>
+			<img src="http://cdn.minus.com/smedia/minus/images/ajax-loader-mellow-big.gif" style="display:none" id="loader"/>
+		</h3>
+
+		<div class="remoteupload_ci_formcontainer">
+		  <form id="remoteUrl" method="POST" action="/api/remote_post/">
+
+				<!-- Left Column -->
+				<div class="remoteupload_cif_leftcol">
+					<label class="remoteupload_cif_label" for="url">
+						<span class="remoteupload_cifl_innerwrap colorset_light">Enter the URL of image or website</span>
+					</label>
+				</div>
+
+				<!-- Middle Column -->
+				<div class="remoteupload_cif_midcol">
+					<% for (var i = 0; i < it.urls.length; i++) { %>
+			    <input type="text" class="remoteupload_cif_input formset_input remote_url <% if (it.wrongUrl && it.wrongUrl == it.urls[i]){ %>wrong<% } %>" name="url" value="<%=it.urls[i]%>" />
+			    <% } %>
+			    <a class="remote_url_more link btnSet btnSet1 right" href="javascript: void(0)">Add more</a>
+					<span class="right">&nbsp;|&nbsp;</span>
+			    <a class="remote_url_remove link btnSet btnSet1 right" href="javascript: void(0)">Remove</a>
+			    <% if (it.error){ %>
+			    <div class="remoteupload_cifc_p error"><span class="error_msg"><%=it.error%></span></div>
+			    <% } %>
+				</div>
+
+				<!-- Right Column -->
+				<div class="remoteupload_cif_rightcol">
+					<div class="btnSet_container"> <!-- btnSet container starts -->
+			            <button class="remoteupload_cif_submit submit_remote_pics btnSet btnSet3 btnSet3_remoteupload" type="submit" value="Submit" name="submit"> <!-- btnSet anchor starts -->
+			                <span class="btnSet_innerwrap">
+			                    <span class="btnSet_innerwrap_value">Submit</span>
+			                </span>
+			            </button> <!-- btnSet anchor ends -->
+			        </div> <!-- btnSet container ends -->
+				</div>
+
+		  </form>
+		</div>
+
+	</div>
+</div>
+<~#~>uploadModalSelect<~#~> <%
+    var galleryVars;
+    for (var i = 0, l = it.galleryList.length; i < l; i++) {
+        galleryVars = it.generateGalleryVarsFunc(it.galleryList[i]);
+%>
+        <option value="<%= galleryVars.id %>" data-item-count="<%= galleryVars.itemCount %>"><%= galleryVars.name %></option>
+<%
+    }
+%>
+<~#~>itemModalUploading<~#~> <div class="item-view-tint"></div>
+
+<div class="item-view-wrapper">
+
+    <div>&nbsp;</div>
+
+    <%? it.isInGallery %> 
+        <div class="modal-arrow left-arrow">
+            <span class="icon-container">
+                <span class="ui-sprite icon"></span>
+            </span>
+        </div>
+
+        <div class="modal-arrow right-arrow">
+            <span class="icon-container">
+                <span class="ui-sprite icon"></span>
+            </span>
+        </div>
+    <%?%>
+
+    <div class="item-content-wrapper">
+        <div class="item-view is-uploading">
+        
+            <div class="body item">
+                <div class="uploading-container <%? it.uploadStats.percentNumber > 0 %>upload-started<%?%>">
+                    <h3>
+                        <span class="upload-queued-msg">Upload Queued:</span>
+                        <span class="uploading-msg">Uploading</span>
+                        <%= it.name %>
+                    </h3>
+
+                    <div class="upload-progress">
+                        <div class="quota_field white upload">
+                            <div 
+                                class="quota_bar orange" 
+                                <%? it.uploadStats %>style="width: <%= it.uploadStats.percentNumber %>%;"<%?%>
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-stat-wrapper">
+                        <div class="upload-stat">
+                            <span class="text-bytes"><%? it.uploadStats %><%= it.uploadStats.bytes %><%?%></span>
+                            <span class="text-percent"><%? it.uploadStats %><%= it.uploadStats.percent %><%?%></span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div> <!--! end: div.body.item -->
+        </div> <!--! end: div.item-view -->
+    </div> <!--! end: div.item-content-wrapper -->
+
+    <div>&nbsp;</div>
+</div>
+
+<~#~>gallerySelectOverlay<~#~> <div class="modal_gallery_list_wrapper" <% if (it.overlay_id) { %>id="<%= it.overlay_id %>"<% } %> style="display:none;">
+    <div class="modal_overlay"></div>
+    <div class="modal_gallery_list_container">
+        <div class="modal_title">
+            <h3 class="modal_gallery_list_title">Choose a Destination Folder...</h3>
+            <span class="modal_gallery_list_close menu_close_btn"></span>
+            <div class="clear"></div>
+        </div>
+
+        <div class="modal_list_wrapper">
+
+            <div class="modal_search_container">
+                <div class="modal_search_input_wrapper border_all_2px">
+                    <span class="modal_search_icon"></span>
+                    <input class="modal_search_input input_wide" placeholder="Search Folder">
+                </div>
+            </div>
+
+            <div class="modal_list_content border_all_2px">
+                <span class="modal_list_loading">Loading...</span>
+                <span class="modal_no_galleries">You have no other folders.</span>
+            </div>
+        </div>
+
+        <div class="modal_buttons">
+            <div class="modal_ajax_copy_existing float_right">
+                <%= it.txt.ajax_loading %>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="modal_header_content">
+            <h3></h3>
+            <div class="create_new_gal_form_container">
+                <form class="create_new_gal_form">
+                    <input class="modal_gallery_name formset_input border_all_2px float_left" type="text" placeholder="Or type name of new folder here.">
+                    <input class="btn btn_ok btn_create_proceed float_left" type="submit" value="Create">
+                    <div class="modal_ajax_loading float_left">
+                        <img src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader.gif">
+                    </div>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<~#~>itemModalTags<~#~> <%? it.tags.length %> 
+    <% for (var i = 0, l = it.tags.length; i < l; i++) { %>
+        <li>
+            <a href="<%= minus.Links.reverse('exploreTags', [it.tags[i]]) %>"><%= _.escape(it.tags[i]) %></a><%? (i !== (l-1)) %>,<%?%>
+        </li>
+    <% } %>
+<%?%>
+<~#~>itemViewContent<~#~> <div class="item-view <%? it.userVote === 'up' %>item-liked<%?%>">
+    <div class="header">
+        <div class="left-col">
+            <div class="author-leftcol">
+                <div>
+                    <%? it.creatorProfileLink %>
+                        <a href="<%= it.creatorProfileLink %>">
+                    <%?%>
+                            <img src="<%= it.creatorAvatar %>" width="48" height="48">
+                    <%? it.creatorProfileLink %>
+                        </a>
+                    <%?%>
+                </div>
+            </div>
+            <div class="author-rightcol">
+                <div class="author">
+                    <% if (it.creatorProfileLink) { %>
+                        <a href="<%= it.creatorProfileLink %>"><%= it.creatorDisplayName %></a>
+                    <% } else { %>
+                        <div class="guest">Guest</div>
+                    <% } %>
+                </div>
+                <div class="source">
+                    <% if (it.showFolderLink) { %>
+                        <% if (it.userVote) { %>
+                            Liked from <a href="/m<%= it.galleryID %>" target="_blank"><%= it.galleryName %></a>
+                        <% } else { %>
+                            Added to <a href="/m<%= it.galleryID %>" target="_blank"><%= it.galleryName %></a>
+                        <% } %>
+                        <span class="time-stamp"><span class="mdash">&mdash;</span>
+                    <% } else if (it.origGallery && it.isOrigInfoDisplayable) { %>
+                        From
+                        <a href="/<%= it.origGallery.url %>"><%= _.escape(it.origGallery.name) %></a>
+                        via 
+                        <% if (it.origGallery.profile) { %>
+                            <a href="<%= it.origGallery.profile %>"><%= _.escape(it.origGallery.displayName) %></a>
+                        <% } else { %>
+                            <%= _.escape(it.origGallery.displayName) %>
+                        <% } %>
+                        <span class="time-stamp"><span class="mdash">&mdash;</span>
+                    <% } %>
+
+                    <%= it.dateCreated %> ago</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <%? !it.isEditor && it.creatorUsername %>
+                <a id="item-view-follow-user"
+                    href="#"
+                    class="
+                            btn-action
+                            <%? !it.isInGallery %>hidden<%?%>
+                            <% if (it.isFollowing) { %>
+                                btn-unfollow
+                            <% } else { %>
+                                btn-follow
+                            <% } %>
+                          "
+                    data-target="<%= it.creatorUsername %>"
+                    data-status="<% if (it.isFollowing) { %>follow<% } else { %>unfollow<% } %>"
+                >
+                    <span class="text">
+                        <% if (it.isFollowing) { %>
+                            Unfollow
+                        <% } else { %>
+                            Follow
+                        <% } %>
+                    </span>
+                </a>
+            <%?%>
+        </div>
+        <div class="clear"></div>
+    </div> <!-- header ends -->
+
+    <div class="body item">
+        <% if (!it.isMature) { %>
+            <div class="item-actions-left">
+                <div class="voting" data-item_id="l<%= it.id %>" data-voted="<%? it.userVote %><%= it.userVote %><%?%>">
+                    <a class="vote_up btn-action btn-like <%? it.voteUpCount === 0 %>no-counter<%?%>" href="javascript: void(0);">
+                        <span class="ui-action-sprite icon-text">
+                            <span class="ui-sprite icon"></span>
+                            <span class="text">Like</span>
+                            <span class="hover-text">Unlike</span>
+                        </span>
+                        <span class="ui-action-sprite counter"><%= it.voteUpCount %></span>
+                    </a>
+                </div>
+            </div>
+            <div class="item-actions-right">
+                <% if (it.isImage && !it.isMature) { %>
+                    <a title="<%= it.filesize %>" class="btn-action btn-view-original no-counter" href="<%= it.originalLink %>" target="_blank">
+                        <span class="ui-action-sprite icon-text">
+                            <span class="ui-sprite icon"></span>
+                            <span class="text"><%= it.width %> x <%= it.height %></span>
+                        </span>
+                    </a>
+                <% } else { %>
+                    <%? it.downloadLink %>
+                    <a class="btn-action btn-download no-counter <%? !it.filesizeBytes %>no-text<%?%>" href="<%= it.downloadLink %>" target="_blank">
+                        <span class="icon-text">
+                            <span class="ui-sprite icon"></span>
+                            <span class="text"><%= it.filesize %></span>
+                        </span>
+                    </a>
+                    <%?%>
+                <% } %>
+            </div>
+            <div class="globalmodal_preloader">
+                <img src="<%= it.IMAGE_URL %>ajax-loader-circle-gray.gif">
+            </div>
+            <% if (it.mediaLink) { %>
+                <div id="<%= it.mainContainerPrefix %><%= it.id %>" class="item-main" href="<%= it.mediaLink %>">
+                    <img id="<%= it.aviaryIDPrefix %><%= it.id %>" class="item-view-img" src="<%= it.itemImageURL %>">
+                </div>
+            <% } else if (it.isSingleton && it.useItemPageImage) { %>
+                <div class="item-main <%? it.isImage %>is-image<%?%>">
+                    <img id="<%= it.aviaryIDPrefix %><%= it.id %>" class="item-view-img" src="<%= it.itemImageURL %>">
+                </div>
+            <% } else { %>
+                <a id="<%= it.mainContainerPrefix %><%= it.id %>" class="item-main <%? it.isImage %>is-image<%?%>"  target="_blank" href="/m<%= it.galleryID %>">
+                    <img id="<%= it.aviaryIDPrefix %><%= it.id %>" class="item-view-img" src="<%= it.itemImageURL %>">
+                </a>
+            <% } %>
+        <% } else { %>
+            <div class="hide_mature">
+                <span class="ui-sprite icon"></span>
+                <span class="text">
+                    <strong>Mature Content</strong>
+                    <br>
+                    <% if (it.isLoggedIn) { %>
+                        This content may be inappropiate. User discretion is advised.
+                        <br>
+                        To disable Safety Mode, update your <a href="/pref">settings</a>.
+                    <% } else { %>
+                      <a class="show_signin" href="javascript: void(0)">Sign in</a> or <a class="show_signup" href="javascript: void(0)">create an account</a> to view this content.
+                    <% } %>
+                </span>
+            </div>
+        <% } %>
+    </div> <!-- body item ends -->
+
+
+    <div class="itemview-info">
+        <div class="left-col">
+            <div class="description 
+                            item-desc-container 
+                            <% if (!it.itemCaptionHTML) { %>
+                                <% if (it.isInGallery) { %>
+                                    empty_mode
+                                <% } else { %>
+                                    hidden
+                                <% } %>
+                            <% } %>
+                        ">
+                <div class="item-desc-read-only">
+                    <p>
+                        <span class="desc">
+                            <%= it.itemCaptionHTML %>
+                        </span>
+                        <a class="link-with-icon link-description item-edit-description <%? !it.isEditor %>hidden<%?%>" href="#">
+                            <span class="ui-sprite icon"></span>
+                            <span class="text">Edit description</span>
+                        </a>
+                    </p>
+                </div> <!--! end: div.item-desc-read-only -->
+                <div class="item-desc-edit <%? !it.isEditor %>hidden<%?%>">
+                    <form class="default-form" action="" method="post">
+                        <fieldset class="item-desc-field">
+                            <textarea class="inline_edit edit_always_visible" name="description"
+                                placeholder="Add a description for this item." spellcheck="false"><%? it.itemCaption %><%= it.itemCaption %><%?%></textarea>
+                        </fieldset>
+                        <fieldset class="item-desc-actions">
+                            <button name="submit" type="submit" class="btn-action">Save</button>
+                            <div class="saving-container">
+                                Saving
+                                <img src="<%= it.IMAGE_URL %>ajax-loader-bar-small.gif">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="tags <%? !it.isInGallery %>hidden<%?%> <%? it.tags.length === 0 %>no-tags<%?%>">
+                Tags:
+                <ul>
+                    <%? it.tags.length %>
+                            <% for (var i = 0, l = it.tags.length; i < l; i++) { %>
+                                <li>
+                                    <a href="<%= minus.Links.reverse('exploreTags', [it.tags[i]]) %>"><%= _.escape(it.tags[i]) %></a><%? (i !== (l-1)) %>,<%?%>
+                                </li>
+                            <% } %>
+                    <%?%>
+                </ul>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="views <%? !it.showViewCount %>hidden<%?%>">
+                <span class="value"><%= intComma(it.views) %></span>
+                <span class="title">Views</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="itemview-share">
+        <div class="left-col">
+            <a class="btn-fb" href="<%= it.shareFacebookLink %>" target="_blank">
+                <span class="ui-sprite icon"></span>
+                <span class="hidden">Share on Facebook</span>
+            </a>
+            <a class="btn-tw" href="<%= it.shareTwitterLink %>" target="_blank">
+                <span class="ui-sprite icon"></span>
+                <span class="hidden">Share on Twitter</span>
+            </a>
+        </div>
+        <div class="right-col">
+
+            <div class="default-form copy-shortlink">
+                <label class="label" for="item-page-link-<%= it.id %>">Link</label>
+                <input id="item-page-link-<%= it.id %>" spellcheck="false" readonly="readonly" type="text" value="http://min.us/l<%= it.id %>" />
+            </div>
+
+            <a class="btn-action btn-share-links" href="#">
+                <span class="ui-sprite icon"></span>
+                <span class="text">Share</span>
+            </a>
+
+            
+            <a class="btn-action aviary-edit-image <%? !it.showEditImage %>hidden<%?%>"> 
+                <span class="ui-sprite icon"></span>
+                <span class="text">Edit Image</span>
+            </a>
+
+            <%? it.isLoggedIn %>
+                <a tooltip="Flag as inappropriate" class="btn-action btn-item-flag <%? it.isFlagged %>flagged<%?%> tooltip-above">
+                    <span class="ui-sprite icon"></span>
+                    <span class="text item-flagged">Flagged</span>
+                </a>
+            <%?%>
+
+            <a class="btn-action btn-item-delete <%? !it.isAuthorizedToDelete %>hidden<%?%>" href="#">
+                <span class="ui-sprite icon"></span>
+                <span class="text">Delete</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="comments-container">
+        <div class="commentbox <% if(!LOGIN_USERNAME){ %>show_signin<% } %>">
+            <img height="48" width="48" <% if(!LOGIN_USERNAME){ %>src="/smedia/minus/images/default_avatar3.png"<% } else { %> src="<%= LOGIN_AVATAR %>"<% } %>>
+            <textarea type="text">Add a comment...</textarea>
+            <button class="btn-general post-comment">Post Comment</button>
+        </div> <!--! end: div.commentbox -->
+
+        <div class="comment-item-prototype" style="display:none !important;">
+            <div class="avatar-col">
+                <a href="javascript: void(0)"><img src="" height="48" width="48" /></a>
+            </div>
+            <div class="comment-col">
+                <div>
+                    <a class="user" href="javascript: void(0)"></a>
+                    <a class="comment-delete" href="javascript: void(0)">
+                        <span class="ui-sprite icon"></span>
+                    </a>
+
+                    <div class="clear"></div>
+
+                    <span class="text"></span>
+                    <span class="timestamp"><span class="middot">&middot;</span><span class="timestamp-value"></span> ago</span>
+                </div>
+            </div> <!--! end: div.comment-col -->
+            <div class="clear"></div>
+        </div> <!--! end: div.comment-item-prototype -->
+    </div> <!--! end: div.comments-container -->
+</div> <!--! end: div.item-view -->
+
+<~#~>itemModal<~#~> 
+<div class="item-view-tint"></div>
+
+<div class="item-view-wrapper">
+
+    <div>&nbsp;</div>
+
+    <%? it.isInGallery %>
+        <div class="modal-arrow left-arrow">
+            <span class="icon-container">
+                <span class="ui-sprite icon"></span>
+            </span>
+        </div>
+
+        <div class="modal-arrow right-arrow">
+            <span class="icon-container">
+                <span class="ui-sprite icon"></span>
+            </span>
+        </div>
+    <%?%>
+
+    <div class="item-content-wrapper"></div>
+
+    <div>&nbsp;</div>
+</div>
+
+</script>
+
+<script type="text/javascript" src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/c/scripts/minus.re54453d4498d673eb7494d81fd479faafa8b2489.js" charset="utf-8"></script>
+
+<!--[if lt IE 8]>
+<script src="http://dgbc7tshfzi70.cloudfront.net/smedia/json/json2.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  if (navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/Android/i)) {
+    if ($.cookie('mobile2') == null) {
+      window.location = '/set_mobile?on=true&redirect=/';
+    }
+}
+$(document).ready(function() {
+  if (navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/Android/i)) {
+    $('body').addClass('mobilebar_true');
+    $('#switch_mobile').on('click', function() {
+      window.location = '/set_mobile?on=true&redirect=/';
+    });
+    $('#switch_standard').on('click', function() {
+      window.location = '/set_mobile?on=false&redirect=/';
+    });
+  }
+})
+</script>
+
+<!--[if lt IE 9]>
+   <script src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/scripts/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="thumb_view
+guest_view
+">
+
+<!-- Google Website Optimizer Tracking Script -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['gwo._setAccount', 'UA-18817430-3']);
+  _gaq.push(['gwo._trackPageview', '/1325178521/test']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End of Google Website Optimizer Tracking Script -->
+
+<script type="text/javascript">
+
+//<![CDATA[
+$(function() {
+  window.READ_ONLY_MODE = false;
+  $(document).ready(function() {
+
+    header_search_init_input_and_label();
+    header_search_init_results_click_and_hover();
+    header_search_init_functions();
+    header_account_bind_click();
+
+  });
+});
+//]]>
+</script>
+
+<div id="fb-root"></div>
+
+<!-- @ Global Layout -->
+<div class="global_layout_wrapper global_layout_onecol">
+
+  <!-- @header -->
+  
+  <header class="gl_header gl_header_fixed">
+    
+
+<div class="primaryheader_i_switch">
+  <span class="switchmsg">Switch to:</span> <a id="switch_mobile" href="javascript: void(0)">Mobile</a>
+</div>
+
+<!-- @block: primary header -->
+ <div class="primaryheader_wrapper">
+   <div class="primaryheader_innerwrap">
+
+     <!-- Left Column -->
+     <div class="primaryheader_i_leftcol">
+       <a class="primaryheader_il_logo" href="http://minus.com/" alt="Minus"></a>
+       <!-- @block: primary search -->
+<div class="primarysearch_wrapper">
+  <div id="header_cont">
+		<div id="search_cont">
+			<div id="search_box">
+				<div id="header_msg">
+					<div id="search_input_box" class="header_msg_div">
+						<form id="minus_search_form" method="get" action="http://minus.com/search">
+							<input id="minus_search_input" type="text"
+								class="formset_input search_close_protect inactive inactive border_all_2px"  autocomplete="off" style="z-index:2 !important;" name="q" />
+							<label id="minus_search_label"  class="tl_placeholder">Search</label>
+							<a href="javascript: void(0)" class="minus_search_go"></a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="global_mainsearch_results_container search_close_protect border_bot_2px"></div>
+</div> <!-- @endblock: primary search -->
+       <!-- @block: primary upload -->
+<div id="primary_upload" class="primaryupload_dropwrapper">
+  
+  <a id="primary_upload_anchor" class="primaryupload_upload">Upload</a> 
+  <div id="primary_upload_arrowwrap" class="primary_upload_arrowwrap">
+    <a id="primary_upload_arrow" href="javascript: void(0)" class="primaryupload_arrow">
+      <span class="arrow arrowdown"></span>
+    </a>
+  </div>
+
+  <ul id="primary_upload_dropdown" class="primaryupload_dropdown">
+    <li><a id="upload_from_web" href="javascript: void(0)"><span>Upload from Web</span></a></li>
+    <li><a id="upload_empty" href="javascript: void(0)"><span>Create Empty Folder</span></a></li>
+    <li><a href="http://minus.com/pages/tools"><span>Other Ways to Upload</span></a></li>
+  </ul>
+</div>
+<script language="javascript" type="text/javascript">
+$(function(){
+    var remoteUploader = new minus.RemoteUploader({
+        publishNewGallery: true,
+        element: "#upload_from_web,.upload_from_web"
+      });
+
+      $('#upload_capture').bind('click', function() {
+        $('#upload_from_web').trigger('click',['snapshot']);
+      });
+      $('#upload_empty').click(function() {
+        $.ajax({
+          url: Gallery.URL_GETID + '?d=' + new Date().getTime(),
+          success: function(data) {
+            window.location = '/m' + data.editor_id;
+          },
+          async: false,
+          type: 'POST',
+          dataType: 'json'
+        });
+      })
+})
+</script>
+
+
+      <div id="primaryheader_il_uploadque" class="primaryheader_il_uploadque">
+        <p></p>
+      </div>
+
+     </div>
+
+     <!-- Right Column -->
+     <div class="primaryheader_i_rightcol">
+
+      <!-- Primary Navigation -->
+      
+      <ul class="guest-ul">
+        <li class="explore"><a href="http://minus.com/explore">Explore</a></li>
+        <li><a class="btn-action btn-createaccount primaryheader_irnul_create" href="javascript: void(0)">Create Account</a></li>
+        <li><a class="btn-action btn-signin primaryheader_irnul_signin" href="javascript: void(0)">Sign In</a></li>
+      </ul>
+      
+
+       <!-- Navigation -->
+       <div class="primaryheader_ir_navigation" style="display: none;">
+         <ul class="primaryheader_irn_ul">
+           
+           <li style="margin-right: 5px;"><a href="http://minus.com/explore">Explore</a></li>
+           <li><a class="btn-action btn-createaccount primaryheader_irnul_create" href="javascript: void(0)">Create Account</a></li>
+           <li><a class="btn-action btn-signin primaryheader_irnul_signin" href="javascript: void(0)">Sign In</a></li>
+           
+         </ul>
+       </div>
+
+       <!-- Account -->
+       
+
+     </div> <!-- Right Col Ends -->
+
+     <!-- Drop Shadow -->
+     <div class="primaryheader_dropshadow"></div>
+
+   </div>
+ </div> <!-- @endblock: primary header -->
+
+  </header>
+  
+
+
+    <!-- @body -->
+    <div class="gl_body">
+      <div class="glb_innerwrap">
+
+        
+
+<div id="glbi_content" class="glbi_content">
+    <div id="glbic_innerwrap" class="glbic_innerwrap">
+
+
+
+
+<div id="item-page-wrapper" class="lpage_wrapper glbici_nongallery show-arrows item-view-component">
+    <div class="lpage_innerwrap">
+
+        
+        
+        
+
+        <!-- item view -->
+        <div class="item-view ">
+
+            <!-- header -->
+            <div class="header">
+
+                <!-- left col -->
+                <div class="left-col">
+                    <div class="author-leftcol">
+                        <div>
+                            
+                                <img width="48" height="48" src="//dgbc7tshfzi70.cloudfront.net/smedia/minus/images/default_avatar3.png" />
+                            
+                        </div>
+                    </div> <!--! end: div.author-leftcol -->
+
+                    <div class="author-rightcol">
+
+                        <div class="author">
+                            
+                                <div class="guest">Guest</div>
+                            
+                        </div>
+                        <div class="source">
+                            
+                            22 minutes ago</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- right col -->
+                <div class="right-col">
+                    
+                        <a id="item-page-follow-user" href="#"
+                            class="
+                                    btn-action
+                                    
+                                        btn-follow
+                                    
+                                  "
+                            data-target="None"
+                            data-status="unfollow"
+                        >
+                            <span class="text">
+                                
+                                    Follow
+                                
+                            </span>
+                        </a>
+                    
+                </div> <!-- right col ends -->
+
+                <div class="clear"></div>
+            </div> <!-- header ends -->
+
+            <!-- body -->
+            <div class="body item">
+                
+                    <div class="item-actions-left">
+                        <div class="voting" data-item_id="lb0mxGwIkiXHHe" data-voted="">
+    <a class="vote_up btn-action btn-like no-counter" href="javascript: void(0);">
+        <span class="ui-action-sprite icon-text">
+            <span class="ui-sprite icon"></span>
+            <span class="text">Like</span>
+            <span class="hover-text">Unlike</span>
+        </span>
+        <span class="ui-action-sprite counter">0</span>
+    </a>
+</div>
+
+                    </div>
+
+                    <div class="item-actions-right">
+                        
+                            <a title="26.5 KB" class="btn-action btn-view-original no-counter" href="http://i.minus.com/ib0mxGwIkiXHHe.jpg">
+                                <span class="icon-text">
+                                    <span class="ui-sprite icon"></span>
+                                    <span class="text">150 x 150</span>
+                                </span>
+                            </a>
+                        
+                    </div>
+
+                    <div class="globalmodal_preloader">
+                        <img src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader-circle-gray.gif">
+                    </div>
+
+                    
+                        
+                            <a class="item-main is-image" 
+                                
+                                
+                                    href="http://i.minus.com/ib0mxGwIkiXHHe.jpg"
+                                
+                            >
+                                <img id="aviary-editable-image-b0mxGwIkiXHHe" class="item-view-img" src="http://i.minus.com/jb0mxGwIkiXHHe.jpg" />
+                            </a>
+                        
+                    
+                
+            </div> <!-- body ends -->
+
+            <!-- info -->
+            <div class="itemview-info">
+                <div class="left-col">
+                    <div class="description item-desc-container empty_mode">
+                        <div class="item-desc-read-only">
+                            <p>
+                                <span class="desc">
+                                    
+                                </span>
+                                
+                            </p>
+                        </div> <!--! end: div.item-desc-read-only -->
+                        
+                    </div> <!--! end: div.description -->
+
+                    <div class="tags no-tags">
+                        Tags:
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div class="views">
+                        <span class="value">1</span>
+                        <span class="title">Views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- share -->
+            <div class="itemview-share">
+                <div class="left-col">
+                    <a class="btn-fb" href="http://www.facebook.com/sharer.php?u=%2Flb0mxGwIkiXHHe&t=Share+from+Minus" target="_blank">
+                        <span class="ui-sprite icon"></span>
+                        <span class="hidden">Share on Facebook</span>
+                    </a>
+                    <a class="btn-tw" href="http://twitter.com/share?url=%2Flb0mxGwIkiXHHe&via=mindotus" target="_blank">
+                        <span class="ui-sprite icon"></span>
+                        <span class="hidden">Share on Twitter</span>
+                    </a>
+
+                    
+                </div>
+                <div class="right-col">
+                    <div class="default-form copy-shortlink">
+                        <label for="item-page-link" class="label">Link</label>
+                        <input id="item-page-link" type="text" readonly="readonly" spellcheck="false" value="http://min.us/lb0mxGwIkiXHHe">
+                    </div>
+                    <a class="btn-action btn-share-links" href="#">
+                        <span class="ui-sprite icon"></span>
+                        <span class="text">Share</span>
+                    </a>
+
+                    
+
+                    
+
+                    
+
+                </div>
+            </div>
+
+            <!-- footer -->
+            
+
+<div class="clear"></div>
+<div class="comments-container">
+
+    <div class="commentbox show_signin">
+        <img height="48" width="48" src="/smedia/minus/images/default_avatar3.png" />
+        <textarea type="text">Add a comment...</textarea>
+        <button class="btn-general post-comment">Post Comment</button>
+    </div>
+
+  <div class="comment-item-prototype" style="display:none !important;">
+        <div class="avatar-col">
+            <a href="javascript: void(0)"><img src="" height="48" width="48" /></a>
+        </div>
+        <div class="comment-col">
+            <div>
+                <a class="user" href="javascript: void(0)"></a>
+                <a class="comment-delete" href="javascript: void(0)">
+                    <span class="ui-sprite icon"></span>
+                </a>
+
+                <div class="clear"></div>
+
+                <span class="text"></span>
+                <span class="timestamp"><span class="middot">&middot;</span><span class="timestamp-value"></span> ago</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div> <!-- item view -->
+    </div> <!-- lpage_innerwrap ends -->
+</div> <!-- lpage_wrapper ends -->
+
+
+
+    </div>
+</div>
+<div class="clear"></div>
+
+
+      </div>
+    </div><!-- @endblock: body -->
+    <div class="clear"></div>
+
+</div>
+
+<!-- @footer -->
+
+    <footer class="gl_footer">
+        <!-- @block: primary footer -->
+<div class="primaryfooter_wrapper">
+  <div class="primaryfooter_innerwrap">
+
+    <!-- a href='http://blog.minus.com/category/updates/'>(2.10)</a -->
+    <ul class="footer_links">
+    	<li><a class="footer_logo" href="http://minus.com/">Minus </a> © 2012 - Share simply</li>
+    	<li><a href='http://minus.com/pages/about'>About</a></li>
+    	<li><a href='http://blog.minus.com'>Blog</a></li>
+    	
+    	<li><a href='http://minus.com/directory'>Directory</a></li>
+    	
+    	<li><a href='http://feedback.minus.com'>Forum</a></li>
+    	<li><a href='http://minus.com/pages/help'>Help</a></li>
+    	<li><a href='http://minus.com/pages/careers'>Careers</a></li>
+    	<li><a href='http://minus.com/pages/tos'>Terms</a></li>
+    	<li><a href='http://minus.com/pages/tools'>Tools</a></li>
+    	<li><a href='http://minus.com/pages/api'>API</a></li>
+    	<li><a href='http://minus.com/pages/contact'>Contact</a></li>
+    </ul>
+
+
+  </div>
+</div> <!-- @endblock: primary footer -->
+    </footer>
+
+
+<script>
+$(document).ready(function() {
+  var anchor = $('<a>', {'id': 'back_to_top_btn', 'class':'back_to_top', 'href':'#header_main', 'title': 'Back to Top', 'text': 'Top'});
+  anchor
+    .appendTo($(document.body))
+    .hide();
+
+  $(window).scroll(function(event){
+      if(getScrollTop() > 150) {
+          anchor.fadeIn(300);
+      } else {
+          anchor.fadeOut(300, function() {$(this).hide();});
+      }
+  });
+
+  anchor.click(function(event) {
+      event.preventDefault();
+      var elem = getScrollableElement('html', 'body');
+      $(elem).animate({scrollTop: 0}, 400);
+  });
+});
+
+function getScrollTop() {
+    var top = 0;
+    top = top !== 0 ? top : (window.pageYOffset ? window.pageYOffset : 0);
+    top = top !== 0 ? top : (document.documentElement ? document.documentElement.scrollTop : 0);
+    top = top !== 0 ? top : (document.body ? document.body.scrollTop : 0);
+    return top;
+}
+</script>
+
+
+<!-- bottom js start -->
+
+<script type="text/javascript">
+//<![CDATA[
+    $(function () {
+        
+        new minus.views.ItemPage({
+            el: '#item-page-wrapper',
+            galleryInfo: {
+                'editorURL': 'bhP7qPupAsaji',
+                'isEditor': false,
+                'readerURL': 'bhP7qPupAsaji'
+            },
+            itemInfo: {
+                'caption': '',
+                'captionHTML': '',
+                'id': 'b0mxGwIkiXHHe',
+                'isFlagged': false,
+                'isMature': false,
+                'isSingleton': true,
+                'hasAudio': false,
+                'hasHDVideo': false,
+                'hasThumbnail': true,
+                'hasVideo': false,
+                'height': 150,
+                'name': 'minilogo.jpg',
+                'number': 1,
+                'type': 0,
+                
+                'width': 150,
+            }
+        });
+    });
+//]]>
+</script>
+
+<!-- bottom js end -->
+
+<div id="drag_indicator" style="display:none;">
+<div class="bg"></div>
+<div class="inside">
+<h1>Start sharing.</h1>
+</div>
+
+<div id="header_clone">
+	<div id="header_clone_ss" class="start_sharing">
+		<h1>Start sharing.</h1>
+	</div>
+</div>
+</div>
+
+  <script type="text/javascript">
+//<![CDATA[
+  var FILES_IN_QUEUE = 0;
+
+  $(function() {
+    var galOpts = {
+      username: '',
+      userDisplayName: '',
+      uploadsPublicByDefault: true
+    },
+    presenterOpts = {
+      light_mode: true 
+    },
+    eOpts = {expanded_menu: 'False'}; 
+
+    if (typeof EDITOR_OPTS !== 'undefined' && EDITOR_OPTS) {
+      eOpts = $.extend(e_opts, EDITOR_OPTS);
+    }
+
+    if (typeof DROP_OPTS !== 'undefined' && DROP_OPTS && DROP_OPTS.drop_calback) {
+      presenterOpts['before_create_container'] = DROP_OPTS.drop_callback;
+    }
+
+    
+    minus.enablePageUpload({
+      galOpts: galOpts,
+      presenterOpts: presenterOpts,
+      eOpts: eOpts,
+      hasDNDHandlers: window.DRAG_N_DROP_DEFINED
+    });
+  });
+//]]>
+</script>
+
+
+<div class="send_message_dialog_package" style="display:none;">
+  <div class="modal_overlay transBg"></div>
+  <div class="modal_container send_message_modal_container">
+	<a href="javascript: void(0)" class="modal_close" title="close">Close</a>
+	<form method="POST" action="/api/messages/send" class="send_message_form">
+        <ul class="send_message_form_inner">
+            <li>
+                Send <span class="message_to_name"></span><span class="message_to_slug_wrapper"> (<span class="message_to_slug"></span>)</span> a message:<input name="target" type="hidden" value=""/>
+            </li>
+            <li>
+                <textarea class="input_field" name="body" id="message_body" style="height:88px;font-family:Helvetica, Arial, sans-serif;"></textarea>
+            </li>
+            <li>
+                <span class="send_message_error error_msg" style="display:none"></span>
+                <span class="submitting_img" style="float:left;display:none;"><img src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader.gif" /></span>
+                <input class="btn input_submit" value="Send" name="submit" type="submit" />
+            </li>
+        </ul>
+        <div class="send_message_form_success" style="display:none">
+            <h3 style="margin-top: 100px; text-align: center;">Message Sent</h3>
+            <a href="javascript:void(0)" class="view_message_link" style="text-align: center; display: block;">View conversation</a>
+        </div>
+    </form>
+  </div>
+</div> <!-- class='send_message_dialog_package'-->
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  window.fbAsyncInit = function() {
+    FB.init({
+      
+      appId  : '217507578283312',
+      
+      status : true, // check login status
+      cookie : true, // enable cookies to allow the server to access the session
+      oauth  : true,
+      channelUrl: 'http://minus.com/api/facebook/channel.html'
+    });
+    $.publish("/fb/loaded")
+  };
+  $(window).load(function() {
+    minus.setState('page_loaded', true);
+    (function() {
+      var e = document.createElement('script');
+      e.src = window.location.protocol + '//connect.facebook.net/en_US/all.js';
+      e.async = true;
+      document.getElementById('fb-root').appendChild(e);
+    }());
+  });
+//]]>
+</script>
+
+
+<div class="login_dialog_package" style="display:none;">
+  <div class="modal_overlay transBg"></div>
+  <div class="modal_login_container">
+	<a href="javascript: void(0)" class="modal_close" title="close">Close</a>
+
+	<!-- Create Tabs -->
+	<div class="ml_container border_left_2px">
+
+		<!-- Title: Create Account -->
+		<div class="ml_top ml_top_createaccount">
+			<h2>Create Account</h2>
+			<p>Get up to 50 GB of free space (30mb per file).</p>
+
+			<!-- Social Sign In -->
+			<div class="mo_top_social">
+				
+        <a id="fb-connect-button" href="/api/facebook/connect" class="btnset3 btn3_fbconnect border_all_2px">
+					<span class="btn3_fbconnect_icon border_all_2px"><strong>f</strong></span>
+					<span class="btn3_fbconnect_value border_all_2px"><strong>With Facebook</strong></span>
+				</a>
+
+				<a id="js_ml_social_twitter" href="/api/twitter/login" class="btnset3 btn3_twitterconnect border_all_2px">
+					<span class="btn3_twitterconnect_icon border_all_2px"><strong>t</strong></span>
+					<span class="btn3_twitterconnect_value border_all_2px"><strong>With Twitter</strong></span>
+				</a>
+  			
+			</div>
+
+		</div>
+
+		<!-- Title: Sign In -->
+		<div class="ml_top ml_top_signin">
+			<h2>Sign In</h2>
+			<p>Welcome back to Minus</p>
+			<!-- Social Sign In -->
+			<div class="mo_top_social">
+  			
+				<a id="fb-connect-signin-button" href="/api/facebook/connect" class="btnset3 btn3_fbconnect border_all_2px">
+					<span class="btn3_fbconnect_icon border_all_2px"><strong>f</strong></span>
+					<span class="btn3_fbconnect_value border_all_2px"><strong>With Facebook</strong></span>
+				</a>
+
+				<a id="js_ml_social_twitter" href="/api/twitter/login" class="btnset3 btn3_twitterconnect border_all_2px">
+					<span class="btn3_twitterconnect_icon border_all_2px"><strong>t</strong></span>
+					<span class="btn3_twitterconnect_value border_all_2px"><strong>With Twitter</strong></span>
+				</a>
+  			
+			</div>
+		</div>
+
+		<div id="js_ml_content" class="ml_content">
+			<div class="ml_createaccount">
+			  
+				  <div class="modal_signup_col">
+  <div class="signup_col_container create">
+  <form id="create_account_form" autocomplete="off">
+  	  <input type="hidden" name="disable_safety_mode" value="0"/>
+	  <div class="signup_fields">
+		  <div class="field">
+			  <h3>Username <span class="error_msg username_error" style="display:none;"></span></h3>
+			  <div class="inputwrap">
+				  <input class="border_all_2px shadow_innerinput_default" type="text" name="username" id="signup_username" />
+			  </div>
+			  <div class="field_info">
+				  <p class="register_user_link">http://<span class="curr_username available">USERNAME</span>.minus.com</p>
+			  </div>
+		  </div>
+
+		  <div class="field">
+			  <h3>Password <span class="error_msg password_error" style="display:none;">The passwords do not match.</span></h3>
+			  <div class="inputwrap">
+				  <input class="border_all_2px shadow_innerinput_default" type="password" name="password1" id="signup_password" />
+				  <input class="border_all_2px shadow_innerinput_default" type="password" name="password2" id="signup_verify_password" style="display:none;" />
+			  </div>
+		  </div>
+
+		  <div class="field">
+			  <h3>E-mail: (Optional) <span class="error_msg email_error" style="display:none;">This email not valid.</span></h3>
+			  <div class="inputwrap">
+				  <input class="border_all_2px shadow_innerinput_default" type="text" name="email" id="signup_email" />
+			  </div>
+		  </div>
+		  <input type="text" name="regname"  id="signup_name_input" style="display:none;" />
+	  </div>
+
+	  <!-- Start Sharing -->
+	  <div class="field_submit">
+		<!-- a class="ml_alreadymember" href="javascript: void(0)">Already a member?</a -->
+	    <input tabindex="5" class="btn_custom_createaccount" type="submit" value="Create Account"/>
+	    <span class="submitting_img" style="display:none;"><img src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader.gif" /></span>
+	  </div>
+
+	</form>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+  $("input#signup_password").change(function(){
+    $("input#signup_verify_password").val($("input#signup_password").val());
+  });
+  // Reset sign up form on load (remove auto-filled input fields).
+//  var $sign_up_form = $('#create_account_form');
+//  if ($sign_up_form) {
+//    $sign_up_form[0].reset();
+//  }
+});
+</script>
+
+  			
+			</div>
+			<div class="ml_signin">
+  			
+			  	<div class="modal_signin_col">
+  <div class="signin_col_container logged">
+    <form id="login_form" method="post">
+        <input type="hidden" name="disable_safety_mode" value="0"/>
+        <input type="hidden" name="web-login" value="true">
+	    <div class="signin_fields">
+
+		    <div class="field">
+			    <h3>Username <span class="error_msg username_error" style="display:none;">The passwords do not match.</span></h3>
+			    <div class="inputwrap">
+				    <input type="text" class="input_username shadow_innerinput_default" name="login-username" />
+			    </div>
+		    </div>
+
+		    <div class="field">
+			    <h3>Password <span class="error_msg password_error" style="display:none;">The passwords do not match.</span></h3>
+			    <div class="inputwrap">
+				    <input type="password" class="input_password1 shadow_innerinput_default" name="login-password" />
+				    <input type="checkbox" name="remember" value="yes" style="display:none;" />
+			    </div>
+		    </div>
+	    </div>
+
+	    <div style="clear:both;"></div>
+		<div class="field_submit">
+			<a href="javascript:void(0);" class="recover_password">Forgot Password?</a>
+			<input type="submit" class="btn_custom_signin" value="Sign In" />
+			<span class="submitting_img" style="display:none;"><img src="http://dgbc7tshfzi70.cloudfront.net/smedia/minus/images/ajax-loader.gif"></span>
+		</div>
+	  </form>
+
+    <div id="recover_password_div">
+	    <form id="recover_password_form" method="post">
+		      <div class="field">
+			      <h3>Enter Your Username
+			          <span class="error_msg rp_username_error" style="display:none;"></span>
+			          <span class="error_msg submitting_msg" style="display:none;">Submitting...</span>
+			          <span class="recover_password_sent">Password sent to the registered email.</span>
+			      </h3>
+			      <div class="inputwrap">
+				      <input type="text" class="input_username" name="rp-username" />
+			      </div>
+	           </div>
+			<input type="submit" class="btn_custom_passreset" value="Email Me" />
+	    </form>
+    </div>
+
+  </div>
+</div>
+
+  			
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Right Column -->
+	<div class="ml_rightcol border_right_2px">
+		<p class="mlr_message">The fun, simple way to share your files.<br /><br />Free and unlimited file sharing for your images, music and docs.</p>
+
+		<a href="/pages/help" class="mlr_learnmore">Learn More</a>
+
+		<!-- Sign In / Create Account -->
+		<div class="ml_signincreate">
+			<a class="ml_sc_label" id="js_ml_sc_signin" href="javascript: void(0)">Sign In</a>
+			<a class="ml_sc_label" id="js_ml_sc_createaccount" href="javascript: void(0)">Create Account</a>
+		</div>
+
+		
+
+
+	</div>
+
+  </div>
+</div> <!-- class='login_dialog_package'-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+  bind_sign_in_button();
+  
+
+  $('#create_account_form input[name=username]').keyup(function(e) {
+    var curr_val = $(this).val();
+    $('#create_account_form .curr_username').text(curr_val);
+    $('#create_account_form .username_error').hide();
+	});
+
+  $('div.login_dialog_package form#recover_password_form').submit(function(event) {
+    recoverpass_user($(this), true);
+    event.preventDefault();
+    return false;
+  });
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>
