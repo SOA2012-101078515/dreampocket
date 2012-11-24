@@ -21,12 +21,26 @@
       </div>
       <div id="id-main" class="main">
 	<ul>
-                <li id="id-service">
+                <li id="id-service1">
 			<div>
                                 <a herf="">
-					<%= image_tag "rails.png" %>
+					<%= image_tag "service.png", :mouseover => 'deleBack()', :style => "width:300px;height:300px" %>
                                 </a>
 			</div>
+                </li>
+		<li id="id-service2">
+                        <div>
+                                <a herf="">
+                                        <%= image_tag "service1.png" %>
+                                </a>
+                        </div>
+                </li>
+		<li id="id-service3">
+                        <div>
+                                <a herf="">
+                                        <%= image_tag "service2.png" %>
+                                </a>
+                        </div>
                 </li>
         </ul>
       </div>
@@ -102,7 +116,10 @@ rame ||
 			posCanvas.style.left = st+"px";
 		}
 	}
-
+     function deleBack(){
+		//var deleback = document.getElementById("id-main");
+		//deleback.background-color = "black";
+	} 
     </script>
 
 </body></html>
