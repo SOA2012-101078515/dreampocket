@@ -1,41 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
-<title>v0</title>
-</head>
-<body onresize = "adjustWidth()" >
- 	<canvas id="myCanvas"></canvas>
-    <div id="id-all" class="all" >
-      <div id="id-top" calss="top">
-        <div id="id-brand" class="brand"><%= image_tag "logo.png" %></div>
-        <div style="margin-left: 250px; margin-top: -0px; height: 150px; background-color: transparent; width: 750px;">
-          <div id="id-top-bar" calss="top-bar" style="float: left; margin-top:-23px; height: 23px; width: 750px; background-color: transparent;">
-            <ul id="if-top-ul">
-              <li><%=link_to "contact us" ,new_home_path%></li>
-              <li><a herf="2">about us</a></li>
-	      <li><a herf="3">service</a></li> 				
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="id-main" class="main">
-	<ul>
+        <ul>
                 <li id="id-service1">
-			<div>
+                        <div>
                                 <a herf="">
-					<%= image_tag "service.png", :mouseover => 'deleBack()', :style => "width:300px;height:300px" %>
+                                        <%= image_tag "service.png", :mouseover => "logo.png", :style => "width:300px;height:250px" %>
                                 </a>
-			</div>
+                        </div>
                 </li>
-		<li id="id-service2">
+                <li id="id-service2">
                         <div>
                                 <a herf="">
                                         <%= image_tag "service1.png" %>
                                 </a>
                         </div>
                 </li>
-		<li id="id-service3">
+                <li id="id-service3">
                         <div>
                                 <a herf="">
                                         <%= image_tag "service2.png" %>
@@ -43,83 +21,3 @@
                         </div>
                 </li>
         </ul>
-      </div>
-      <div id="id-bottom" class="bottom" style="margin-left: 0px; height: 100px; background-color: #000000; width: 1000px;"></div>
-
-
-    </div>
-
-</body></html>
-<script>
-      window.requestAnimFrame = (function(callback) {
-        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationF
-rame ||
-        function(callback) {
-          window.setTimeout(callback, 1000 / 60);
-        };
-      })();
-
-      var count = 0;
-      var border = true;
-      function animate() {
-         
-      // update 
-      var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-      if(count > -1 && border == true){
-          count = count + 50;
-          if(count == 5000)    border = false;
-      }
-      if(count < 5001 && border == false){
-          count = count - 50; 
-          if(count == 0)    border = true; 
-      }
-      // clear 
-      context.clearRect(0, 0, canvas.width, canvas.height);
-
-      // draw stuff
-      context.rect(0, 0, canvas.width, canvas.height);
-
-      // add linear gradient
-      var grd = context.createLinearGradient(count, count, 1000, 0);
-      // light blue
-      //grd.addColorStop(0, '#fffafa');   
-
-      grd.addColorStop(0, 'rgb(240,240,240)');   
-      // dark blue
-
-      //grd.addColorStop(1, 'rgb(232,232,232)');
-      grd.addColorStop(1, 'rgb(230,230,230)');
-      context.fillStyle = grd;
-      context.fill();
-//      context.font = '20pt Calibri';
-//      context.fillStyle = 'blue';
-//      context.fillText('Hello World!!!', 50, 50); 
-        // request new frame
-        requestAnimFrame(function() {
-          animate();
-        });
-      }
-      animate();
-	adjustWidth();
-	function adjustWidth(){
-		var w = 0;
-		var mysize = 1000; 
-		if (document.body.clientWidth){	
-    			w = document.body.clientWidth;    
-		}
-		var allDiv = document.getElementById("id-all");
-		var posCanvas = document.getElementById("myCanvas");
-		var st = (w-1000)/2;
-		if(st>0){
-			allDiv.style.left = st+"px";
-			posCanvas.style.left = st+"px";
-		}
-	}
-     function deleBack(){
-		//var deleback = document.getElementById("id-main");
-		//deleback.background-color = "black";
-	} 
-    </script>
-
-</body></html>
