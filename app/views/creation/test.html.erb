@@ -1,1 +1,33 @@
-this is test1
+<script type="text/javascript" src="Concurrent.Thread.js"></script>
+ <script type="text/javascript">
+     Concurrent.Thread.create(
+
+	function(){
+         var i = 0;
+         while ( 1 ) {
+             document.getElementById('id-main').innerHTML += i++ + "<br>";
+         }
+     	}
+      );
+ </script>
+
+
+
+
+<script>
+
+function adiv(num, x, y){
+alert('s');
+var div = document.getElementById('id-main');
+var oDiv = document.createElement("DIV");
+oDiv.innerText="test";
+oDiv.id=num;
+alert(1);
+div.appendChild(oDiv);
+
+}
+
+</script>
+
+
+<button onclick='adiv(3,4,5)'>test</button>

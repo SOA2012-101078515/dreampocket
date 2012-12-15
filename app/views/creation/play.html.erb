@@ -1,18 +1,51 @@
 
 
-test
+
 <%= @asd%> 
 <%= button_to 'test1', 'creation/test'%>
-<button type='button' onclick='left()'>left</button>
 <%= @test.testshow(6)%>
 </br>
 
 <script>
 	function left(){
-		alert('left')
-	}
-	function right(){
-		alert('right')
-	}
 
+		var div = document.getElementById('id-main');
+		var oDiv = document.createElement("DIV");
+		oDiv.innerText="test";
+		div.appendChild(oDiv);
+	}
+	function keyf(){
+		
+		var w = 0;
+		var mysize = 1000; 
+		if (document.body.clientWidth){	
+    			w = document.body.clientWidth;    
+		}
+		var allDiv = document.getElementById("id-top");
+		var w = allDiv.clientWidth;
+	        var posCanvas = document.getElementById("myCanvas");
+		//var st = (w-1000)/2;
+ 		switch (event.keyCode){
+			case 37:
+			    Text1.value = "left";
+			    posCanvas.style.left =  parseInt(posCanvas.style.left) + 10 + "px";
+			    break;
+			
+			case 38:
+			    window.moveBy(0, -5);
+			    Text1.value = "up";
+			    break;
+			
+			case 39:
+			    window.moveBy(5, 0);
+			    Text1.value = "right";
+			    break;
+			
+			case 40:
+			    window.moveBy(0, 5);
+			    Text1.value = "down";
+			    break;
+		}
+	}
 </script>
+

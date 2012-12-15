@@ -7,7 +7,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body onresize = "adjustWidth()">
+<body onresize = "adjustWidth()" onload="document.onkeydown=keyf">
 <canvas id="myCanvas"></canvas>
     <div id="id-all" class="all" >
       <div id="id-top" calss="top">
@@ -30,7 +30,7 @@
 
     </div>
 
-
+<input id="Text1" type = "text" />
 
 </body>
 </html>
