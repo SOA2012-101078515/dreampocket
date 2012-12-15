@@ -1,0 +1,22 @@
+here is contact us placehere is contact us placehere is contact us placehere is contact us place
+<%= Request.all%>
+<%= @ggg%>
+<% t = Testadd.new%>/*execute function of the class which in the controller*/
+<%= t.addd(12)%>
+<%= form_tag '/home', :method=>nil  do %>
+
+        <%= label :request, :name, 'name'%>
+	<%= text_field :request, :name%> 
+
+        <%= label :request, :description, 'description'%>
+	<%= text_field :request, :description%>
+        <%= submit_tag 'save'%>
+
+<% end%>
+
+<%= form_tag '/home', :method=>nil  do %>
+
+	<%= text_field :number,:number %>
+	<%= submit_tag 'saveqq'%>
+<%end%>
+
