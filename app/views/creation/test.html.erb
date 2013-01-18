@@ -1,34 +1,42 @@
 <script type="text/javascript" src="Concurrent.Thread.js"></script>
  <script type="text/javascript">
 
-	alert(0);
-	function star(){
-         Concurrent.Thread.create(function(){
-                var i = 0;
-                while ( 1 ) {
-                        i=i+1;
-                        adiv(i,i,i);
-                        Concurrent.Thread.sleep(100);
-         }});
+	var id=1;
+
+	function beestart(){
+		var x = Math.random()*1000; 
+		adiv(id,x);
+		move();
+	}
+
+	function move(){
+		 Concurrent.Thread.create(function(){
+                        var i = 0;
+                        while ( 1 ) {
+                                 document.getElementById(id).style.top=i+"px";
+                                i=i+1;
+                                Concurrent.Thread.sleep(100);
+                }});
 	}
 </script>
 
 <script>
 
 
-function adiv(num, x, y){
- var div = document.getElementById('id-main');
- var oDiv = document.createElement("DIV");
- oDiv.innerText="test";
- oDiv.style.position = "absolute"; 
- oDiv.id=num;
- oDiv.style.top=y+"px";
- div.appendChild(oDiv);
+function adiv(num, x){
+	var div = document.getElementById('id-main');
+	var oDiv = document.createElement("DIV");
+	oDiv.innerText="test";
+	oDiv.style.position = "absolute"; 
+	oDiv.id=num;
+	oDiv.style.left=x+"px";
+	div.appendChild(oDiv);
+	return oDiv;
 }
 
 </script>
 
 
-<button onclick='star()'>press test</button>
+<button onclick='beestart()'>press test</button>
 	
 

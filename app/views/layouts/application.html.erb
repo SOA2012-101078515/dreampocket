@@ -8,13 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body onresize = "adjustWidth()" onload="document.onkeydown=keyf">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <canvas id="myCanvas"></canvas>
     <div id="id-all" class="all" >
-      <div id="id-top" calss="top">
+     <div id="id-top" calss="top">
       <div id="id-brand" class="brand"><%=link_to image_tag("#{'logo.png'}"),home_index_path%></div>
         <div style="margin-left: 250px; margin-top: -0px; height: 150px; background-color: transparent; width: 750px;">
           <div id="id-top-bar" calss="top-bar" style="float: left; margin-top:-23px; height: 23px; width: 750px; background-color: transparent;">
             <ul id="if-top-ul">
+	      <li><%=link_to "login" ,new_user_session_path%></li>
               <li><%=link_to "contact us" ,new_home_path%></li>
               <li><a herf="2">about us</a></li>
               <li><a herf="3">service</a></li>

@@ -1,4 +1,6 @@
 Firstproject::Application.routes.draw do
+
+devise_for :users
 	match 'creation/test'=>'creation#test'
  	match 'creation' => 'creation#play'
 	resources :creation
